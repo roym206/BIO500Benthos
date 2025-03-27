@@ -166,6 +166,21 @@ data_benthos<-subset(final_data_clean, select = c(ID,nom_sci,site,date_obs,fract
 #créer un data_frame selon le même ordre que la clé primaire pour site
 data_site <- subset(final_data_clean, select = c(date,site,largeur_riviere,profondeur_riviere,vitesse_courant,transparence_eau,temperature_eau_c))
 
+#Créer la table Benthos
+tbl_benthos<- "
+CREATE TABLE benthos (
+ID        INTEGER PRIMARY KEY,
+nom_sci   CHARACTER(50),
+site      VARCHAR(20),
+date_obs  CHARACTER(20),
+fraction  NUMERIC,
+abondance INTEGER,
+heure_obs CHARACTER(20),
+ETIQSTATION CHARACTER(20),
+FOREIGN KEY (SITE)
+);"
+
+dbSendQuery(con, tbl_benthos)
 
 
 #Créer la table site
@@ -181,20 +196,6 @@ temperature_eau_c   REAL
 );"
 dbSendQuery(con, tbl_site)
 
-#Créer la table Benthos
-tbl_benthos<- "
-CREATE TABLE benthos (
-ID        INTEGER PRIMARY KEY,
-nom_sci   CHARACTER(50),
-site      VARCHAR(20),
-date_obs  CHARACTER(20),
-fraction  NUMERIC,
-abondance INTEGER,
-heure_obs CHARACTER(20),
-ETIQSTATION CHARACTER(20)
-);"
-
-dbSendQuery(con, tbl_benthos)
 
 #Injection des donnees
 dbWriteTable(con, append = TRUE, name ="site", value=data_site)
