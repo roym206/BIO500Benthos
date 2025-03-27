@@ -5,7 +5,7 @@ library(lubridate)
 library(janitor)
 library(stringr)
 
-directory_path <-"/Users/erick-daniel/Documents/benthos"
+directory_path <-"DATA"
 csv_files <- list.files(path = directory_path,pattern = "\\.csv$", full.names = TRUE)
 print(csv_files)
 
