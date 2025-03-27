@@ -184,7 +184,7 @@ dbSendQuery(con, tbl_site)
 #Créer la table Benthos
 tbl_benthos<- "
 CREATE TABLE benthos (
-ID        INTEGER PRIMARY KEY AUTOINCREMENT,
+ID        INTEGER PRIMARY KEY,
 nom_sci   CHARACTER(50),
 site      VARCHAR(20),
 date_obs  CHARACTER(20),
