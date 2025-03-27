@@ -59,6 +59,6 @@ dbDisconnect(con)
 
 }
 
-creerBD(final_data_clean, db_name = "reseau.db")
+
 
 
