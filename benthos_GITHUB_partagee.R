@@ -33,7 +33,7 @@ na_columns <- sapply(final_data, function(col) all(is.na(col)))
 
 # Afficher les noms des colonnes qui contiennent uniquement des NA
 columns_with_na_only <- names(na_columns[na_columns == TRUE])
-print(columns_with_na_only)
+
 
 # Supprimer les colonnes contenant uniquement des NA
 final_data_clean <- final_data %>%
@@ -55,7 +55,7 @@ final_data_clean$nom_sci<- toupper(final_data_clean$nom_sci)
 
 is_numeric <- grepl("^[-+]?[0-9]*\\.?[0-9]+$", final_data_clean$temperature_eau_c)
 non_numeric_values <- final_data_clean[!is_numeric, ]
-print(non_numeric_values)
+
 # les valeurs non-conformes sont des NA donc pas de correction nécessaire
 
 
@@ -67,7 +67,7 @@ print(non_numeric_values)
 
 is_numeric <- grepl("^[-+]?[0-9]*\\.?[0-9]+$", final_data_clean$vitesse_courant)
 non_numeric_values <- final_data_clean[!is_numeric, ]
-print(non_numeric_values)
+
 # les valeurs non-conformes sont des NA donc pas de correction nécessaire
 
 
@@ -76,7 +76,7 @@ print(non_numeric_values)
 
 is_numeric <- grepl("^[-+]?[0-9]*\\.?[0-9]+$", final_data_clean$profondeur_riviere)
 non_numeric_values <- final_data_clean[!is_numeric, ]
-print(non_numeric_values)
+
 # les valeurs non-conformes sont des NA donc pas de correction nécessaire
 
 
@@ -85,14 +85,14 @@ print(non_numeric_values)
 
 is_numeric <- grepl("^[-+]?[0-9]*\\.?[0-9]+$", final_data_clean$abondance)
 non_numeric_values <- final_data_clean[!is_numeric, ]
-print(non_numeric_values)
+
 
 # Vérifier si chaque valeur de la colonne 'largeur_riviere' est un chiffre
 # Afficher les valeurs qui ne sont pas des chiffres
 
 is_numeric <- grepl("^[-+]?[0-9]*\\.?[0-9]+$", final_data_clean$largeur_riviere)
 non_numeric_values <- final_data_clean[!is_numeric, ]
-print(non_numeric_values)
+
 
 # les valeurs non-conformes sont des NA donc pas de correction nécessaire
 
@@ -103,7 +103,7 @@ print(non_numeric_values)
 
 is_numeric <- grepl("^[-+]?[0-9]*\\.?[0-9]+$", final_data_clean$fraction)
 non_numeric_values <- final_data_clean[!is_numeric, ]
-print(non_numeric_values)
+
 
 
 # Convertir la colonne en facteur pour pouvoir vérifier le nombre de niveau
@@ -125,8 +125,6 @@ final_data_clean$transparence_eau <- gsub("ÉLEVÉE", "ELEVEE", final_data_clean
 final_data_clean$date <- as.Date(final_data_clean$date, format = "%Y-%m-%d")
 
 #Vérifier si les données dans la colonne date sont conforme au format yyy-mm-jj
-install.packages("lubridate")
-library(lubridate)
 
 is_date <- !is.na(ymd(final_data_clean$date, quiet = TRUE))
 table(is_date)
