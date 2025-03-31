@@ -1,4 +1,6 @@
 
+install.packages("dplyr" , dependencies = TRUE)
+
 library(readr)
 library(dplyr)
 library(lubridate)
@@ -6,7 +8,9 @@ library(janitor)
 library(stringr)
 
 
-#Nettoyage des données 
+#Combiner less fichiers en un seul data frame et
+#faire un nettoyage des données :
+
 
 source('Fonctions/fonction_nettoyerdata.R')
 directory_path <- "DATA"
@@ -17,7 +21,8 @@ final_data_clean<-process_data(directory_path)
 source('Fonctions/creer_tables.R')
 creerBD(final_data_clean, db_name = "reseau.db")
 
-
+#tester notre BD avec des requêtes 
+source('Fonctions/requete.R')
 
 
 

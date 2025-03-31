@@ -45,6 +45,7 @@ fraction  NUMERIC,
 abondance INTEGER,
 heure_obs CHARACTER(20),
 ETIQSTATION CHARACTER(20)
+FOREIGN KEY (site) REFERENCES site(date, site)
 );"
 
 dbSendQuery(con, tbl_benthos)
