@@ -1,3 +1,11 @@
+#Code aussi intégré dans la fonction de nettoyage des données
+#Donc plus besoin?
+
+
+
+
+
+
 #Code pour retirer les colonnes qui contiennent seulement des NA
 
 supprimer_col_na <- function(data){

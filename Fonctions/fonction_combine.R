@@ -1,14 +1,19 @@
-#Importer SQL et connecter à R pour pouvoir combiner les BD
 
-#install.packages('RSQLite')
-#library(RSQLite)
-#install.packages('DBI')
-#library(DBI)
-
-setwd("~/UdeS/Hiver 2025/BIO500/Projet de session - données-20250211/benthos/benthos")
+#LIRE
+#PAS IMPORTANT???? C'EST FAIS DANS LA FONCTION DE NETTOYAGE DES DONNÉES DÉJÀ
 
 
-chemin_dossier <- "~/UdeS/Hiver 2025/BIO500/Projet de session - données-20250211/benthos/benthos" 
+
+
+
+
+
+
+
+
+
+
+
 
 fonc_combine <- function(chemin_dossier) {
   

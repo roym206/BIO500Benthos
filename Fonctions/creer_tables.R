@@ -3,6 +3,7 @@
 creerBD <- function(final_data_clean, db_name = "reseau.db"){
 
 library(RSQLite)
+library(DBI)
   
 con <-dbConnect(SQLite(), dbname="db_name")
 
@@ -11,7 +12,7 @@ con <-dbConnect(SQLite(), dbname="db_name")
 final_data_clean$ID <- 1:nrow(final_data_clean)
 
 #créer un data_frame selon le même ordre que la clé primaire pour benthos
-data_benthos<-subset(final_data_clean, select = c(ID,nom_sci,site,date_obs,fraction,abondance,heure_obs,ETIQSTATION))
+data_benthos<-subset(final_data_clean, select = c(nom_sci,site,date_obs,fraction,abondance,heure_obs,ETIQSTATION))
 
 
 #créer un data_frame selon le même ordre que la clé primaire pour site
@@ -28,17 +29,18 @@ largeur_riviere     REAL,
 profondeur_riviere  REAL,
 vitesse_courant     REAL,
 transparence_eau    VARCHAR(20),
-temperature_eau_c   REAL
+temperature_eau_c   REAL,
+PRIMARY KEY (date, site)
 );"
 dbSendQuery(con, tbl_site)
 
 #Créer la table Benthos
 tbl_benthos<- "
 CREATE TABLE benthos (
-ID        INTEGER PRIMARY KEY,
+ID        INTEGER PRIMARY KEY AUTOINCREMENT,
 nom_sci   CHARACTER(50),
 site      VARCHAR(20),
-date_obs  CHARACTER(20),
+date      DATE,
 fraction  NUMERIC,
 abondance INTEGER,
 heure_obs CHARACTER(20),
@@ -50,7 +52,6 @@ dbSendQuery(con, tbl_benthos)
 #Injection des donnees
 dbWriteTable(con, append = TRUE, name ="site", value=data_site)
 dbWriteTable(con, append = TRUE, name ="benthos", value=data_benthos)
-
 
 
 
