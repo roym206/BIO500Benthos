@@ -9,19 +9,19 @@ abondance_esp_transp_e <- "
 
 SELECT nom_sci, abondance
 FROM benthos
-JOIN site
+FULL OUTER JOIN emplacement ON benthos.site AND benthos.date = emplacement.site AND emplacement.date
 WHERE transparence_eau like 'ELEVEE'
 ;"
 
 Requete_transparence_e<- dbGetQuery(con, abondance_esp_transp_e)
-head(Requete_transparence_e)
+  head(Requete_transparence_e)
 
 
 abondance_esp_transp_m <- "
 
 SELECT nom_sci, abondance
 FROM benthos
-JOIN site
+JOIN emplacement
 WHERE transparence_eau like 'MOYENNE'
 ;"
 
@@ -32,7 +32,7 @@ abondance_esp_transp_f <- "
 
 SELECT nom_sci, abondance
 FROM benthos
-JOIN site
+JOIN emplacement
 WHERE transparence_eau like 'FAIBLE'
 ;"
 
