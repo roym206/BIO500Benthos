@@ -21,8 +21,8 @@ data_site <- subset(final_data_clean, select = c(date,site,largeur_riviere,profo
 
 
 #Créer la table site
-tbl_site <-"
-CREATE TABLE site (
+tbl_emplacement <-"
+CREATE TABLE emplacement (
 date                DATE,
 site                VARCHAR(20),
 largeur_riviere     REAL,
@@ -32,7 +32,7 @@ transparence_eau    VARCHAR(20),
 temperature_eau_c   REAL,
 PRIMARY KEY (date, site)
 );"
-dbSendQuery(con, tbl_site)
+dbSendQuery(con, tbl_emplacement)
 
 #Créer la table Benthos
 tbl_benthos<- "
@@ -45,7 +45,7 @@ fraction  NUMERIC,
 abondance INTEGER,
 heure_obs CHARACTER(20),
 ETIQSTATION CHARACTER(20)
-FOREIGN KEY (site) REFERENCES site(date, site)
+FOREIGN KEY (site, date) REFERENCES emplacement(site, date)
 );"
 
 dbSendQuery(con, tbl_benthos)
