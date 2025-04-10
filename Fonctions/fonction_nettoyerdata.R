@@ -1,18 +1,21 @@
+#Charger les packages
+
 library(readr)
 library(dplyr)
 library(lubridate)
 library(janitor)
 library(stringr)
 
+### Étape 1: Combiner les données de tous les sites en un dataframe ###
+
+# Combiner les données de tous les sites en un data frame
 process_data <- function(directory_path) {
   csv_files <- list.files(path = directory_path, pattern = "\\.csv$", full.names = TRUE)
   print(csv_files)
   
   donnees <- list()
   
-### Étape 1: Combiner les données de tous les sites en un dataframe ###
-  
-  # Combiner les données de tous les sites en un data frame
+
   for (file in csv_files) {
     data <- read.csv(file)
     donnees <- append(donnees, list(data))
