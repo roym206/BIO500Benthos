@@ -1,14 +1,7 @@
 
 #install.packages("dplyr" , dependencies = TRUE)
 
-library(readr)
-library(dplyr)
-library(lubridate)
-library(janitor)
-library(stringr)
-
-
-#Combiner less fichiers en un seul data frame et
+#Combiner les fichiers en un seul data frame et
 #faire un nettoyage des données :
 
 
