@@ -1,4 +1,4 @@
-install.packages("targets")
+#install.packages("targets")
 
 #Fichier principal
 #tar_make()
@@ -8,11 +8,11 @@ install.packages("targets")
   library(targets)
   #Appeler les scripts
   source('Fonctions/fonction_nettoyerdata.R')
-  # source('Fonctions/creer_tables.R')
+  source('Fonctions/creer_tables.R')
   # source('Fonctions/requete.R')
   # source('Fonctions/requete_temp.R')
   # source('Fonctions/figure_resume.R')
-  tar_option_set(packages = c("dplyr", "readr", "DBI", "RSQLite"))  #mettre les libraries qu'on aura besoin dans le target dans le vecteur (c())
+  tar_option_set(packages = c("dplyr", "readr", "DBI", "RSQLite", "janitor"))  #mettre les libraries qu'on aura besoin dans le target dans le vecteur (c())
 
 #Étape 2 : créer le target pour automatiser le pipeline
 list(
@@ -23,15 +23,15 @@ list(
     format = "file"
   ),
   
-  # tar_target(
-  #   name = donnees,
-  #   purrr::map(chemin, read.csv)
-  # ),
-  
   # Une target pour importer et nettoyer les données
   tar_target(
-    name = 'final_data_clean',
+    name = final_data_clean,
     command = process_data(chemin)
+  # ),
+  # #Créer nos tables
+  # tar_target(
+  #   name = 'BDeb',
+  #   command = creerBD(final_data_clean, db_name = "reseau.db")
   )
 )
 
@@ -42,8 +42,8 @@ list(
 # #faire un nettoyage des données :
 # 
 # 
-#source('Fonctions/fonction_nettoyerdata.R')
- #directory_path <- "DATA"
+# source('Fonctions/fonction_nettoyerdata.R')
+# directory_path <- "DATA"
 # final_data_clean<-process_data(directory_path)
 # print(head(final_data_clean))
 # 

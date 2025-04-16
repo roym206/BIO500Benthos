@@ -7,9 +7,10 @@ library(dplyr)
 ### Étape 1: Préparer les données à l'injection ###
 
  ## Étape 1.1: Préparer la table benthos
-
+creerBD <- function(final_data_clean, db_name = "reseau.db"){
+  
 # Ajouter une colonne ID aux données nettoyées
-final_data_clean$ID <- 1:nrow(final_data_clean)
+# final_data_clean$ID <- 1:nrow(final_data_clean)
 
 # créer un data_frame selon le même ordre que la clé primaire pour la table benthos
 data_benthos<-subset(final_data_clean, select = c(nom_sci,site,date_obs,fraction,abondance,heure_obs,ETIQSTATION))
@@ -30,7 +31,7 @@ data_emplacement$ID_place <- 1:nrow(data_emplacement)
 ### Étape 2: créer les tables SQL ###
 
 ## Étape 2.1: créer la connexion 
-creerBD <- function(final_data_clean, db_name = "reseau.db"){
+
   
   con <-dbConnect(SQLite(), dbname = db_name)
 
