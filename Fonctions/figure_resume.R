@@ -1,5 +1,5 @@
 #Créer un flowchart
-install.packages("DiagrammeR")
+#install.packages("DiagrammeR")
 library(DiagrammeR)
 grViz("digraph flowchart {
       # node definitions with substituted label text
