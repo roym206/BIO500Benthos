@@ -34,8 +34,9 @@ process_data <- function(directory_path) {
   columns_with_na_only <- names(na_columns[na_columns == TRUE])
   
   # Supprimer les colonnes qui contiennent seulement des NA
-  final_data_clean <- final_data %>%
-    select(-which(na_columns))  
+  final_data_clean <- final_data[, !na_columns]
+  #final_data_clean <- final_data %>%
+    #select(-which(na_columns))  
   
   # Vérifier qu'il ne reste plus de colonnes avec des NA
   print(head(final_data_clean))
