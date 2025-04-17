@@ -71,7 +71,7 @@ dbWriteTable(con, append = TRUE, name ="benthos", value = data_benthos)
 # Déconnexion de la BD
 # dbDisconnect(con)
 
-# Retourner les deux bases de données
+# Retourner les deux bases de données pour le target 
 return(list(
   tbl_benthos = dplyr::tbl(con, "benthos"),
   tbl_emplacement = dplyr::tbl(con, "emplacement"),
