@@ -12,7 +12,7 @@
   # source('Fonctions/requete.R')
   # source('Fonctions/requete_temp.R')
   # source('Fonctions/figure_resume.R')
-  tar_option_set(packages = c("dplyr", "readr", "DBI", "RSQLite", "janitor"))  #mettre les libraries qu'on aura besoin dans le target dans le vecteur (c())
+  tar_option_set(packages = c("dplyr", "readr", "DBI", "RSQLite", "janitor", "ggplot2"))  #mettre les libraries qu'on aura besoin dans le target dans le vecteur (c())
 
 #Étape 2 : créer le target pour automatiser le pipeline
 list(
@@ -31,25 +31,25 @@ list(
 
 
 
-# #Combiner les fichiers en un seul data frame et
-# #faire un nettoyage des données :
-# 
+#Combiner les fichiers en un seul data frame et
+#faire un nettoyage des données :
+
 # 
 # source('Fonctions/fonction_nettoyerdata.R')
 # directory_path <- "DATA"
 # final_data_clean<-process_data(directory_path)
 # print(head(final_data_clean))
 # 
-# #Créer les bases de données et injecter les données dans les tables de notre fonction 
+# #Créer les bases de données et injecter les données dans les tables de notre fonction
 # 
 # source('Fonctions/creer_tables.R')
 # creerBD(final_data_clean, db_name = "reseau.db")
 # 
-# #tester notre BD avec des requêtes 
+# #tester notre BD avec des requêtes
 # source('Fonctions/requete.R')
 # 
 # 
 # tar_read(chemin)
-# 
-# 
-# 
+
+
+

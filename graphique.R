@@ -1,4 +1,5 @@
 
+library(ggplot2)
 # graphique de la richesse spécifique en fonction de la température
 plot(Requete_temperature$temperature_eau_c, Requete_temperature$richesse_specifique,
      xlab = "Température de l'eau (°C)",
