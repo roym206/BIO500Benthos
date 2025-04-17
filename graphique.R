@@ -1,10 +1,10 @@
 
 # graphique de la richesse spécifique en fonction de la température
-plot(Requete_richesse$temperature_eau_c, Requete_richesse$richesse_specifique,
+plot(Requete_temperature$temperature_eau_c, Requete_temperature$richesse_specifique,
      xlab = "Température de l'eau (°C)",
      ylab = "Richesse spécifique",
      main = "Richesse spécifique en fonction de la température")
-abline(lm(richesse_specifique ~ temperature_eau_c, data = Requete_richesse), col = "red")
+abline(lm(richesse_specifique ~ temperature_eau_c, data = Requete_temperature), col = "red")
 
 
 
@@ -12,27 +12,72 @@ abline(lm(richesse_specifique ~ temperature_eau_c, data = Requete_richesse), col
 
 # graphique de la richesses spécifique en fonction de la profondeur
 
-# Tracer le nuage de points avec des limites spécifiques sur l'axe X
-plot(Requete_profondeur_clean$profondeur_riviere, Requete_profondeur_clean$richesse_specifique,
-     xlab = "Profondeur (m)",
-     ylab = "Richesse spécifique",
-     main = "Richesse spécifique en fonction de la profondeur",
-     xlim = c(0, 30))  # Définir les limites de l'axe X de 0 à 1
+library(dplyr)
+# Créer des intervalles de profondeur
+Requete_profondeur$intervalle_profondeur<- cut(
+  Requete_profondeur$profondeur_riviere,
+  breaks = seq(0, 0.8, by = 0.2),
+  include.lowest = TRUE,
+  right = TRUE
+)
 
-# Ajouter la droite de régression
-abline(lm(richesse_specifique ~ profondeur_riviere, data = Requete_profondeur_clean), col = "red")
+# Enlever les lignes avec NA dans l'intervalle
+Requete_profondeur <- Requete_profondeur %>%
+  filter(!is.na(intervalle_profondeur))
+
+#Calculer la richesse moyenne par intervalle de profondeur
+richesse_moyenne_selon_profondeur <- Requete_profondeur %>%
+  group_by(intervalle_profondeur) %>%
+  summarise(richesse_moyenne = mean(richesse_specifique, na.rm = TRUE))
+# Créer un histogramme
+ggplot(richesse_moyenne_selon_profondeur, aes(x = intervalle_profondeur, y = richesse_moyenne)) +
+  geom_col(fill = "darkblue", width = 0.5) +
+  labs(
+    x = "Intervalle de profondeur (m)",
+    y = "Richesse spécifique moyenne",
+    title = "Richesse spécifique moyenne selon la profondeur"
+  ) +
+  theme_minimal()
+
 
 
 
 # graphique de la richesses spécifique en fonction de la vitesse du courant
 
-# Tracer le nuage de points pour richesse spécifique vs vitesse du courant
-plot(Requete_courant$vitesse_courant, Requete_courant$richesse_specifique,
-     xlab = "Vitesse du courant (m/s)", 
-     ylab = "Richesse spécifique", 
-     main = "Relation entre richesse spécifique et vitesse du courant",
-     xlim = c(0, 30))  # Définir les limites de l'axe X de 0 à 1
+# Créer les classes de courant
+Requete_courant$classe_courant <- cut(
+  Requete_courant$vitesse_courant,
+  breaks = c(0, 0.2, 0.4, 0.6, 1.0),
+  include.lowest = TRUE,
+  right = FALSE
+)
 
-# Ajouter une droite de régression linéaire
-abline(lm(richesse_specifique ~ vitesse_courant, data = Requete_courant), col = "red")
+# Supprimer les NA s’il y en a
+Requete_courant_clean <- Requete_courant %>%
+  filter(!is.na(classe_courant), !is.na(richesse_specifique))
+
+# Diagramme de densité
+ggplot(Requete_courant_clean, aes(x = richesse_specifique, fill = classe_courant)) +
+  geom_density(alpha = 0.9) +
+  labs(
+    title = "Distribution de la richesse spécifique selon la vitesse du courant",
+    x = "Richesse spécifique",
+    y = "Densité",
+    fill = "Classe de courant (m/s)"
+  ) +
+  theme_minimal()
+
+#La densité en Y indique la probabilité relative de trouver une valeur de richesse spécifique dans un intervalle donné.
+
+
+
+
+
+
+
+
+
+
+
+
 
