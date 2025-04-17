@@ -67,16 +67,25 @@ dbWriteTable(con, append = TRUE, name ="emplacement", value = data_emplacement)
 dbWriteTable(con, append = TRUE, name ="benthos", value = data_benthos)
 
 
-
-# Déconnexion de la BD
-# dbDisconnect(con)
-
-# Retourner les deux bases de données pour le target 
-return(list(
-  tbl_benthos = dplyr::tbl(con, "benthos"),
-  tbl_emplacement = dplyr::tbl(con, "emplacement"),
-  con = con #Retour de la connexion qui reste active
-))
+ # Créer des objets dplyr::tbl pour les tables SQL
+ tbl_benthos <- dplyr::tbl(con, "benthos")
+ tbl_emplacement <- dplyr::tbl(con, "emplacement")
+ 
+ # Retourner les objets
+ return(list(
+   tbl_benthos = tbl_benthos,
+   tbl_emplacement = tbl_emplacement,
+   con = con
+ ))
+ 
+ # Déconnexion de la BD
+ #dbDisconnect(con)
+ 
+# Retourner les deux bases de données pour le target
+# return(list(
+#   tbl_benthos = dplyr::tbl(con, "benthos"),
+#   tbl_emplacement = dplyr::tbl(con, "emplacement"),
+#   con = con #Retour de la connexion qui reste active
 
 }
 

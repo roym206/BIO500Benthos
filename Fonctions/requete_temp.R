@@ -7,6 +7,7 @@ con <-dbConnect(SQLite(), dbname="db_name")
 
 #Requete pour la température pour avoir la richesse spécifique par site
 
+fonction_requete_temp <- function(con) {
 Requete_temperature <- "
 SELECT 
     b.site,
@@ -20,6 +21,8 @@ GROUP BY b.site, b.date_obs, e.temperature_eau_c;
 "
 Requete_temperature <- dbGetQuery(con, Requete_temperature)
 head(Requete_temperature)
+}
+
 
 
 Requete_courant<- "

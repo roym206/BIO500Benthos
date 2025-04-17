@@ -10,7 +10,7 @@
   source('Fonctions/fonction_nettoyerdata.R')
   source('Fonctions/creer_tables.R')
   # source('Fonctions/requete.R')
-  # source('Fonctions/requete_temp.R')
+  source('Fonctions/requete_temp.R')
   # source('Fonctions/figure_resume.R')
   tar_option_set(packages = c("dplyr", "readr", "DBI", "RSQLite", "janitor", "ggplot2"))  #mettre les libraries qu'on aura besoin dans le target dans le vecteur (c())
 
@@ -23,9 +23,18 @@ list(
   ),
   #Créer nos tables SQL
   tar_target(
-    name = db_objects,
+    name = reseau.db,
     command = creerBD(final_data_clean, db_name = "reseau.db")
+  ),
+  
+  # Prochaine étape : faire des requêtes
+  tar_target(
+    name = Requete_temperature,
+    command = fonction_requete_temp(reseau.db$con)
+
   )
+  
+  # Ensuite créer le fichier Rmarkdown
 )
 
 
