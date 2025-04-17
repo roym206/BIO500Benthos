@@ -16,22 +16,15 @@
 
 #Étape 2 : créer le target pour automatiser le pipeline
 list(
-  #Une target pour le chemin du fichier de données
-  tar_target(
-    name = chemin ,
-    command = list.files( "DATA" , full.names = TRUE),
-    format = "file"
-  ),
-  
-  # Une target pour importer et nettoyer les données
+    # Une target pour importer et nettoyer les données
   tar_target(
     name = final_data_clean,
-    command = process_data(chemin)
-  # ),
-  # #Créer nos tables
-  # tar_target(
-  #   name = 'BDeb',
-  #   command = creerBD(final_data_clean, db_name = "reseau.db")
+    command = process_data("DATA")
+  ),
+  #Créer nos tables SQL
+  tar_target(
+    name = db_objects,
+    command = creerBD(final_data_clean, db_name = "reseau.db")
   )
 )
 

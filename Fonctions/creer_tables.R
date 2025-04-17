@@ -9,8 +9,6 @@ library(dplyr)
  ## Étape 1.1: Préparer la table benthos
 creerBD <- function(final_data_clean, db_name = "reseau.db"){
   
-# Ajouter une colonne ID aux données nettoyées
-# final_data_clean$ID <- 1:nrow(final_data_clean)
 
 # créer un data_frame selon le même ordre que la clé primaire pour la table benthos
 data_benthos<-subset(final_data_clean, select = c(nom_sci,site,date_obs,fraction,abondance,heure_obs,ETIQSTATION))
@@ -31,8 +29,6 @@ data_emplacement$ID_place <- 1:nrow(data_emplacement)
 ### Étape 2: créer les tables SQL ###
 
 ## Étape 2.1: créer la connexion 
-
-  
   con <-dbConnect(SQLite(), dbname = db_name)
 
 ## Étape 2.2: Créer la table Benthos
@@ -74,6 +70,13 @@ dbWriteTable(con, append = TRUE, name ="benthos", value = data_benthos)
 
 # Déconnexion de la BD
 dbDisconnect(con)
+
+# Retourner les deux bases de données
+return(list(
+  tbl_benthos = dplyr::tbl(con, "benthos"),
+  tbl_emplacement = dplyr::tbl(con, "emplacement"),
+  con = con #Retour de la connexion pour une utilisation ultérieure
+))
 
 }
 
