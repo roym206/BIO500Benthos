@@ -23,8 +23,8 @@ Requete_temperature <- dbGetQuery(con, Requete_temperature)
 head(Requete_temperature)
 }
 
-
-
+#Requête richesse en fonction de la température
+fonction_requete_cou <- function(con) {
 Requete_courant<- "
 SELECT 
     b.site,
@@ -38,9 +38,11 @@ GROUP BY b.site, b.date_obs, e.vitesse_courant;
 "
 Requete_courant <- dbGetQuery(con, Requete_courant)
 head(Requete_courant)
+}
 
 
-
+#Requête richesse en fonction profondeur
+fonction_requete_pro <- function(con) {
 Requete_profondeur<- "
 SELECT 
     b.site,
@@ -54,7 +56,7 @@ GROUP BY b.site, b.date_obs, profondeur_riviere;
 "
 Requete_profondeur <- dbGetQuery(con, Requete_profondeur)
 head(Requete_profondeur)
-
+}
 
 
 
