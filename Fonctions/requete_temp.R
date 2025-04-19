@@ -1,12 +1,15 @@
 
-#install.packages("RSQLite")
+#Installer les packages
 library(RSQLite)
 library(DBI)
 source("Fonctions/creer_tables.R")
+
+### Étape 1: Se connecter à la base de données ###
 con <-dbConnect(SQLite(), dbname="db_name")
 
-#Requete pour la température pour avoir la richesse spécifique par site
+### Étape 2: Faire les requête ###
 
+#Requête richesse spécifique par site en fonction de la température
 fonction_requete_temp <- function(con) {
 Requete_temperature <- "
 SELECT 
@@ -23,7 +26,7 @@ Requete_temperature <- dbGetQuery(con, Requete_temperature)
 head(Requete_temperature)
 }
 
-#Requête richesse en fonction de la température
+#Requête richesse spécifique en fonction du courant
 fonction_requete_cou <- function(con) {
 Requete_courant<- "
 SELECT 
@@ -40,8 +43,7 @@ Requete_courant <- dbGetQuery(con, Requete_courant)
 head(Requete_courant)
 }
 
-
-#Requête richesse en fonction profondeur
+#Requête richesse spécifique en fonction de la profondeur
 fonction_requete_pro <- function(con) {
 Requete_profondeur<- "
 SELECT 
