@@ -1,7 +1,6 @@
-#install.packages("targets")
-
 #Fichier principal
-#tar_make()
+
+
 #Étape 1 : Appeler les packages et fonctions nécessaires
 
   #Appeler les libraries
@@ -21,17 +20,32 @@ list(
     name = final_data_clean,
     command = process_data("DATA")
   ),
+  
   #Créer nos tables SQL
   tar_target(
     name = reseau.db,
     command = creerBD(final_data_clean, db_name = "reseau.db")
   ),
   
-  # Prochaine étape : faire des requêtes
+  # requête température
   tar_target(
     name = Requete_temperature,
     command = fonction_requete_temp(reseau.db$con)
 
+  ),
+  
+  # requête courant
+  tar_target(
+    name = Requete_courant,
+    command = fonction_requete_cou(reseau.db$con)
+    
+  ),
+  
+  # requête profondeur
+  tar_target(
+    name = Requete_profondeur,
+    command = fonction_requete_pro(reseau.db$con)
+    
   )
   
   # Ensuite créer le fichier Rmarkdown
