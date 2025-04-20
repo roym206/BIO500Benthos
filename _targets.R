@@ -32,21 +32,21 @@ list(
   #requête température
   tar_target(
     name = Requete_temperature,
-    command = fonction_requete_temp(reseau.db)
+    command = fonction_requete_temp("reseau.db")
 
   ),
 
   #requête courant
   tar_target(
     name = Requete_courant,
-    command = fonction_requete_cou(reseau.db)
+    command = fonction_requete_cou("reseau.db")
 
   ),
   
   # requête profondeur
   tar_target(
     name = Requete_profondeur,
-    command = fonction_requete_pro(reseau.db)
+    command = fonction_requete_pro("reseau.db")
   
   ),
   
