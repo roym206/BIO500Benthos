@@ -5,7 +5,7 @@ library(DBI)
 source("Fonctions/creer_tables.R")
 
 ### Étape 1: Se connecter à la base de données ###
-con <-dbConnect(SQLite(), dbname="db_name")
+#con <-dbConnect(SQLite(), dbname="db_name") #chatGPT m'a dit de l'enlever
 
 ### Étape 2: Faire les requête ###
 
