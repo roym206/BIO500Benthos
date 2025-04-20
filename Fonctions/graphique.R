@@ -1,16 +1,20 @@
 
 
 # Fonction pour créer un graphique de la richesse spécifique en fonction de la température
-graphique_richesse_temperature <- function() {
+graphique_richesse_temperature <- function(Requete_temperature) {
   library(ggplot2)
   
   # graphique de la richesse spécifique en fonction de la température
-  graphique_rt <- plot(Requete_temperature$temperature_eau_c, Requete_temperature$richesse_specifique,
-       xlab = "Température de l'eau (°C)",
-       ylab = "Richesse spécifique",
-       main = "Richesse spécifique en fonction de la température")
+  graphique_rt <- ggplot(Requete_temperature, aes(x= temperature_eau_c, y= richesse_specifique)) +
+    geom_point() + 
+    geom_smooth(method = "lm", se = FALSE, color = "red")+
+    labs(   
+       x = "Température de l'eau (°C)",
+       y = "Richesse spécifique",
+       title = "Richesse spécifique en fonction de la température"
+    ) +
+      theme_minimal()
   
-  abline(lm(richesse_specifique ~ temperature_eau_c, data = Requete_temperature), col = "red")
   return(graphique_rt)
 }
 

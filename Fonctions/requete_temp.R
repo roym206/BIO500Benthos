@@ -12,15 +12,22 @@ source("Fonctions/creer_tables.R")
 #Requête richesse spécifique par site en fonction de la température
 fonction_requete_temp <- function(con) {
 Requete_temperature <- "
-SELECT 
-    b.site,
-    b.date_obs,
-    COUNT(DISTINCT b.nom_sci) AS richesse_specifique,
-    e.temperature_eau_c
-FROM benthos b
-LEFT JOIN emplacement e
-ON b.site = e.site AND b.date_obs = e.date_obs
-GROUP BY b.site, b.date_obs, e.temperature_eau_c;
+  SELECT 
+      COUNT(DISTINCT b.nom_sci) AS richesse_specifique,
+      e.temperature_eau_c
+  FROM benthos b
+  LEFT JOIN emplacement e
+    ON b.site = e.site AND b.date_obs = e.date_obs
+  GROUP BY e.temperature_eau_c;
+# SELECT 
+#     b.site,
+#     b.date_obs,
+#     COUNT(DISTINCT b.nom_sci) AS richesse_specifique,
+#     e.temperature_eau_c
+# FROM benthos b
+# LEFT JOIN emplacement e
+# ON b.site = e.site AND b.date_obs = e.date_obs
+# GROUP BY b.site, b.date_obs, e.temperature_eau_c;
 "
 Requete_temperature <- dbGetQuery(con, Requete_temperature)
 return(Requete_temperature)
