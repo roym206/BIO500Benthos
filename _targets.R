@@ -54,7 +54,23 @@ list(
     name = Graphique_richesseXtemperature,
     command = graphique_richesse_temperature(Requete_temperature)
     
-  ))
+  ),
+  
+  # Graphique richesse en fonction du courant
+  
+  tar_target(
+    name = Graphique_richesseXcourant,
+    command = graphique_richesse_courant(Requete_courant)
+    
+  ),
+  
+  # Graphique richesse en fonction de la profondeur
+  
+  tar_target(
+    name = Graphique_richesseXprofondeur,
+    command = graphique_richesse_profondeur(Requete_profondeur)
+    
+  ),
   
   
   

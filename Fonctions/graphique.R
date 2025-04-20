@@ -2,7 +2,7 @@
 
 # Fonction pour créer un graphique de la richesse spécifique en fonction de la température
 graphique_richesse_temperature <- function(Requete_temperature) {
-  library(ggplot2)
+  
   
   # graphique de la richesse spécifique en fonction de la température
   graphique_rt <- ggplot(Requete_temperature, aes(x= temperature_eau_c, y= richesse_specifique)) +
@@ -23,9 +23,8 @@ graphique_richesse_temperature <- function(Requete_temperature) {
 
 
 # Fonction pour créer un graphique de la richesse spécifique en fonction de la profondeur
-graphique_richesse_profondeur <- function() {
-  library(ggplot2)
-  library(dplyr)
+graphique_richesse_profondeur <- function(Requete_profondeur) {
+ 
   
   # Créer des intervalles de profondeur
   Requete_profondeur$intervalle_profondeur <- cut(
@@ -59,14 +58,9 @@ graphique_richesse_profondeur <- function() {
 
 
 
-
-
-
-
 # Fonction pour créer un graphique de la richesse spécifique en fonction de la vitesse du courant
-graphique_richesse_courant <- function() {
-  library(ggplot2)
-  library(dplyr)
+graphique_richesse_courant <- function(Requete_courant) {
+ 
   
   # Créer les classes de courant
   Requete_courant$classe_courant <- cut(
