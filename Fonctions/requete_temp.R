@@ -54,7 +54,7 @@ fonction_requete_pro <- function(db_path = "reseau.db") {
 Requete_profondeur<- "
   SELECT 
       COUNT(DISTINCT b.nom_sci) AS richesse_specifique,
-      e. profondeur_riviere
+      e.profondeur_riviere
   FROM benthos b
   LEFT JOIN emplacement e
     ON b.site = e.site AND b.date_obs = e.date_obs
@@ -69,27 +69,3 @@ return(Requete_profondeur)
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-# SELECT 
-#     b.site,
-#     b.date_obs,
-#     COUNT(DISTINCT b.nom_sci) AS richesse_specifique,
-#     e.temperature_eau_c
-# FROM benthos b
-# LEFT JOIN emplacement e
-# ON b.site = e.site AND b.date_obs = e.date_obs
-# GROUP BY b.site, b.date_obs, e.temperature_eau_c;
-
-
-
-
