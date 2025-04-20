@@ -49,7 +49,7 @@ list(
  # )
   
   # Ensuite créer le fichier Rmarkdown
-)
+#)
 
 
 
@@ -76,6 +76,5 @@ creerBD(final_data_clean, db_name = "reseau.db")
 # 
 # 
 # tar_read(chemin)
-
 
 

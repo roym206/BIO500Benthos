@@ -59,7 +59,7 @@ process_data <- function(directory_path) {
   }
   
   # Convertir la colonne "transparence_eau" en facteur
-  final_data$transparence_eau <- factor(final_data$transparence_eau)
+  final_data_clean$transparence_eau <- factor(final_data_clean$transparence_eau)
   
   # Vérifier combien de valeurs différentes existe dans la colonne "transparence_eau"
   levels_transparence <- levels(final_data$transparence_eau)
@@ -92,6 +92,6 @@ process_data <- function(directory_path) {
   # Standardiser la colonne heure
   final_data_clean$heure_obs <- gsub("h", ":", final_data_clean$heure_obs)
   
- 
+  return(final_data_clean)
 
 }
