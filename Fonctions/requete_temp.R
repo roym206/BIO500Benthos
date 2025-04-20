@@ -23,7 +23,7 @@ ON b.site = e.site AND b.date_obs = e.date_obs
 GROUP BY b.site, b.date_obs, e.temperature_eau_c;
 "
 Requete_temperature <- dbGetQuery(con, Requete_temperature)
-head(Requete_temperature)
+return(Requete_temperature)
 }
 
 #Requête richesse spécifique en fonction du courant
@@ -40,7 +40,7 @@ ON b.site = e.site AND b.date_obs = e.date_obs
 GROUP BY b.site, b.date_obs, e.vitesse_courant;
 "
 Requete_courant <- dbGetQuery(con, Requete_courant)
-head(Requete_courant)
+return(Requete_courant)
 }
 
 #Requête richesse spécifique en fonction de la profondeur
@@ -57,7 +57,7 @@ ON b.site = e.site AND b.date_obs = e.date_obs
 GROUP BY b.site, b.date_obs, profondeur_riviere;
 "
 Requete_profondeur <- dbGetQuery(con, Requete_profondeur)
-head(Requete_profondeur)
+return(Requete_profondeur)
 }
 
 
