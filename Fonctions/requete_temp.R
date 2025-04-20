@@ -11,7 +11,7 @@ source("Fonctions/creer_tables.R")
 
 #Requête richesse spécifique par site en fonction de la température
 fonction_requete_temp <- function(db_path= "reseau.db") {
-  con <-dbConnect(SQLite(), dbname="db_path")
+  con <-dbConnect(SQLite(), dbname=db_path)
 Requete_temperature <- "
   SELECT 
       COUNT(DISTINCT b.nom_sci) AS richesse_specifique,
@@ -20,6 +20,66 @@ Requete_temperature <- "
   LEFT JOIN emplacement e
     ON b.site = e.site AND b.date_obs = e.date_obs
   GROUP BY e.temperature_eau_c;
+"
+
+
+Requete_temperature <- dbGetQuery(con, Requete_temperature)
+dbDisconnect(con)
+return(Requete_temperature)
+
+}
+
+#Requête richesse spécifique en fonction du courant
+fonction_requete_cou <- function(db_path = "reseau.db") {
+  con <-dbConnect(SQLite(), dbname=db_path)
+Requete_courant<- "
+  SELECT 
+      COUNT(DISTINCT b.nom_sci) AS richesse_specifique,
+      e.vitesse_courant
+  FROM benthos b
+  LEFT JOIN emplacement e
+    ON b.site = e.site AND b.date_obs = e.date_obs
+  GROUP BY e.vitesse_courant;
+;
+"
+Requete_courant <- dbGetQuery(con, Requete_courant)
+dbDisconnect(con)
+return(Requete_courant)
+
+}
+
+#Requête richesse spécifique en fonction de la profondeur
+fonction_requete_pro <- function(db_path = "reseau.db") {
+  con <-dbConnect(SQLite(), dbname=db_path)
+Requete_profondeur<- "
+  SELECT 
+      COUNT(DISTINCT b.nom_sci) AS richesse_specifique,
+      e. profondeur_riviere
+  FROM benthos b
+  LEFT JOIN emplacement e
+    ON b.site = e.site AND b.date_obs = e.date_obs
+  GROUP BY e.profondeur_riviere;
+;
+"
+Requete_profondeur <- dbGetQuery(con, Requete_profondeur)
+
+dbDisconnect(con)
+return(Requete_profondeur)
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 # SELECT 
 #     b.site,
 #     b.date_obs,
@@ -29,61 +89,6 @@ Requete_temperature <- "
 # LEFT JOIN emplacement e
 # ON b.site = e.site AND b.date_obs = e.date_obs
 # GROUP BY b.site, b.date_obs, e.temperature_eau_c;
-"
-Requete_temperature <- dbGetQuery(con, Requete_temperature)
-return(Requete_temperature)
-}
-
-#Requête richesse spécifique en fonction du courant
-fonction_requete_cou <- function(con) {
-Requete_courant<- "
-  SELECT 
-      COUNT(DISTINCT b.nom_sci) AS richesse_specifique,
-      e.vitesse_courant
-  FROM benthos b
-  LEFT JOIN emplacement e
-    ON b.site = e.site AND b.date_obs = e.date_obs
-  GROUP BY e.vitesse_courant;
-#SELECT 
-#     b.site,
-#     b.date_obs,
-#     COUNT(DISTINCT b.nom_sci) AS richesse_specifique,
-#     e.vitesse_courant
-# FROM benthos b
-# LEFT JOIN emplacement e
-# ON b.site = e.site AND b.date_obs = e.date_obs
-# GROUP BY b.site, b.date_obs, e.vitesse_courant;
-"
-Requete_courant <- dbGetQuery(con, Requete_courant)
-return(Requete_courant)
-}
-
-#Requête richesse spécifique en fonction de la profondeur
-fonction_requete_pro <- function(con) {
-Requete_profondeur<- "
-  SELECT 
-      COUNT(DISTINCT b.nom_sci) AS richesse_specifique,
-      e. profondeur_riviere
-  FROM benthos b
-  LEFT JOIN emplacement e
-    ON b.site = e.site AND b.date_obs = e.date_obs
-  GROUP BY e.profondeur_riviere;
-# SELECT 
-#     b.site,
-#     b.date_obs,
-#     COUNT(DISTINCT b.nom_sci) AS richesse_specifique,
-#     e.profondeur_riviere
-# FROM benthos b
-# LEFT JOIN emplacement e
-# ON b.site = e.site AND b.date_obs = e.date_obs
-# GROUP BY b.site, b.date_obs, profondeur_riviere;
-"
-Requete_profondeur <- dbGetQuery(con, Requete_profondeur)
-return(Requete_profondeur)
-}
-
-
-
 
 
 
