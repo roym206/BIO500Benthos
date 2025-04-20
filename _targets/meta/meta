@@ -21,9 +21,37 @@ Projet_final_BIO500|stem|8541fe7f544d7680|ab3562553271755d|2c530c1562a7fbd1|4387
 fonction_requete_cou|function|4c38530b5705d961
 fonction_requete_pro|function|b25c013ebb4148a8
 graphique_richesse_temperature|function|2f972481ac6702e6
+<<<<<<< HEAD
 fonction_requete_temp|function|b756df08e9fe311c
+=======
+<<<<<<< HEAD
+fonction_requete_temp|function|b178b5be70e3b079
+=======
+<<<<<<< HEAD
+fonction_requete_temp|function|b178b5be70e3b079
+=======
+fonction_requete_temp|function|7a78ad32b5ea5303
+>>>>>>> 154136a24abb95e985d36e791685bf438f736d6a
+>>>>>>> 5d32a7a8ed9e2a81cde84b786a8f8881ff892cfb
+>>>>>>> 83d3a926c15c4fb5422cb5c3603b24577e618636
 creerBD|function|1bb08d5d65e81327
 process_data|function|b3db11683335bf9e
 graphique_richesse_profondeur|function|fd9157dacfb9ad8d
 graphique_richesse_courant|function|fafba00293b31fc0
+<<<<<<< HEAD
 Requete_temperature|stem||0b2385101be46c17|7c7582b02d6b77e5|-484512097||t20195.7220078589s||0|rds|local|vector|||0.219||no such table: benthos
+=======
+<<<<<<< HEAD
+Requete_temperature|stem||0b2385101be46c17|422b9dae9c5dd9f7|-484512097||t20195.7220078589s||0|rds|local|vector|||0.2||no such table benthos
+=======
+<<<<<<< HEAD
+Requete_temperature|stem||0b2385101be46c17|422b9dae9c5dd9f7|-484512097||t20195.7220078589s||0|rds|local|vector|||0.547||no such table: benthos
+=======
+<<<<<<< HEAD
+Requete_temperature|stem|cebf55124eeed6a5|0b2385101be46c17|dca2da5a53d27571|-484512097||t20198.9492694098s||373|rds|local|vector|||0.198||no such table: benthos
+=======
+Requete_temperature|stem||0b2385101be46c17|4e6ae9ee354deca8|-484512097||t20195.7220078589s||0|rds|local|vector|||0.5||impossible de trouver une méthode héritée pour la fonction 'dbGetQuery' pour la signature 'conn = "character", statement = "character"'
+>>>>>>> 1519290a43106d06de67d29ca5a9297a65b6afc1
+>>>>>>> 154136a24abb95e985d36e791685bf438f736d6a
+>>>>>>> 5d32a7a8ed9e2a81cde84b786a8f8881ff892cfb
+>>>>>>> 83d3a926c15c4fb5422cb5c3603b24577e618636
