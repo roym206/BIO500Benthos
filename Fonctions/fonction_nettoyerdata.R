@@ -23,8 +23,7 @@ process_data <- function(directory_path) {
   
   
   final_data <- bind_rows(donnees)
-  print(head(final_data))
-  
+
 ### Étape 2: Conserver uniquement les colonnes contenant des données ###  
   
   # Vérifier si des colonnes contiennent seulement des NA
@@ -38,10 +37,7 @@ process_data <- function(directory_path) {
   #final_data_clean <- final_data %>%
     #select(-which(na_columns))  
   
-  # Vérifier qu'il ne reste plus de colonnes avec des NA
-  print(head(final_data_clean))
-  str(final_data_clean)
-  
+
 ### Étape 3: Standardiser le nom des colonnes ###
   
   # Standardiser le nom des colonnes
@@ -69,10 +65,7 @@ process_data <- function(directory_path) {
   levels_transparence <- levels(final_data$transparence_eau)
   num_levels <- length(levels_transparence)
   
-  # Afficher le nombre de valeurs différentes
-  cat("Il y a", num_levels, "niveaux dans la colonne 'transparence_eau'.\n")
-  # Il y a 3 noms différents, ce qui est normal
-  
+ 
   # Standardiser le nom des valeurs dans la colonne 'transparence_eau'
   final_data_clean$transparence_eau <- gsub("ÉLEVÉE", "ELEVEE", final_data_clean$transparence_eau)
   
@@ -100,5 +93,5 @@ process_data <- function(directory_path) {
   final_data_clean$heure_obs <- gsub("h", ":", final_data_clean$heure_obs)
   
  
-  return(final_data_clean)
+
 }

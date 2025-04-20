@@ -14,3 +14,8 @@ DBI::dbIsValid(db_objects$con)
 dbGetQuery(db_objects$con, "SELECT * FROM emplacement")
 dbGetQuery(db_objects$con, "SELECT * FROM benthos")
 
+1
+
+
+
+targets::tar_errored()
