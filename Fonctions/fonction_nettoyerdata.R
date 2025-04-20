@@ -1,16 +1,21 @@
+#Charger les packages
+
 library(readr)
 library(dplyr)
 library(lubridate)
 library(janitor)
 library(stringr)
 
+### Étape 1: Combiner les données de tous les sites en un dataframe ###
+
+# Combiner les données de tous les sites en un data frame
 process_data <- function(directory_path) {
   csv_files <- list.files(path = directory_path, pattern = "\\.csv$", full.names = TRUE)
   print(csv_files)
   
   donnees <- list()
   
-  # Combine dataframes into one dataframe
+
   for (file in csv_files) {
     data <- read.csv(file)
     donnees <- append(donnees, list(data))
@@ -18,71 +23,76 @@ process_data <- function(directory_path) {
   
   
   final_data <- bind_rows(donnees)
-  print(head(final_data))
+
+### Étape 2: Conserver uniquement les colonnes contenant des données ###  
   
-  # Check if a column contains only NA
+  # Vérifier si des colonnes contiennent seulement des NA
   na_columns <- sapply(final_data, function(col) all(is.na(col)))
   
-  # Display the names of columns that contain only NA
+  # Regrouper les colonnes qui contiennent seulement des NA
   columns_with_na_only <- names(na_columns[na_columns == TRUE])
   
-  # Remove columns containing only NA
-  final_data_clean <- final_data %>%
-    select(-which(na_columns))  # Remove columns where na_columns is TRUE
+  # Supprimer les colonnes qui contiennent seulement des NA
+  final_data_clean <- final_data[, !na_columns]
+  #final_data_clean <- final_data %>%
+    #select(-which(na_columns))  
   
-  # Check the result
-  print(head(final_data_clean))
-  str(final_data_clean)
+
+### Étape 3: Standardiser le nom des colonnes ###
   
-  # Standardize the variable names
+  # Standardiser le nom des colonnes
   final_data_clean$transparence_eau <- toupper(final_data_clean$transparence_eau)
   final_data_clean$ETIQSTATION <- toupper(final_data_clean$ETIQSTATION)
   final_data_clean$nom_sci <- toupper(final_data_clean$nom_sci)
   
-  # Check if each value in the column 'transparence_eau' is a number
-  # Display the values that are not numbers
+### Étape 4: S'assurer que les colonnes soit du bon type ###
+  
+ ## Étape 4.1: colonne "transparence_eau"
+  
+  # Vérifier si les valeurs dans la colonne 'transparence_eau' sont des nombres
+  # Et afficher les valeurs qui ne sont pas des nombres
   numeric_columns <- c("temperature_eau_c", "vitesse_courant", "profondeur_riviere", "abondance", "largeur_riviere", "fraction")
   for (col in numeric_columns) {
     is_numeric <- grepl("^[-+]?[0-9]*\\.?[0-9]+$", final_data_clean[[col]])
     non_numeric_values <- final_data_clean[!is_numeric, ]
-    # Values that are non-conforming are NA so no correction necessary
+    # Les données qui ne sont pas des nombres sont des NA donc pas de correction nécessaire
   }
   
-  # Convert the column to factor to check the number of levels
-  final_data$transparence_eau <- factor(final_data$transparence_eau)
-  # Check the levels in the column 'transparence_eau'
-  levels_transparence <- levels(final_data$transparence_eau)
-  # Count the number of levels
-  num_levels <- length(levels_transparence)
-  # Display the number of levels
-  cat("Il y a", num_levels, "niveaux dans la colonne 'transparence_eau'.\n")
+  # Convertir la colonne "transparence_eau" en facteur
+  final_data_clean$transparence_eau <- factor(final_data_clean$transparence_eau)
   
-  # Standardize the name in the column 'transparence_eau'
+  # Vérifier combien de valeurs différentes existe dans la colonne "transparence_eau"
+  levels_transparence <- levels(final_data$transparence_eau)
+  num_levels <- length(levels_transparence)
+  
+ 
+  # Standardiser le nom des valeurs dans la colonne 'transparence_eau'
   final_data_clean$transparence_eau <- gsub("ÉLEVÉE", "ELEVEE", final_data_clean$transparence_eau)
   
-  # Set the column 'date' to the correct format
+ ## Étape 4.2: colonne "date"
+  
+  # Mettre la colonne "date" dans le format date
   final_data_clean$date <- as.Date(final_data_clean$date, format = "%Y-%m-%d")
   
-  # Check if the data in the 'date' column is in the correct format yyy-mm-dd
+  # Vérifier si la colonne "date" est dans le format yyy-mm-dd
   is_date <- !is.na(ymd(final_data_clean$date, quiet = TRUE))
   table(is_date)
   
-  # Display rows with non-conforming dates
-  final_data_clean$date[!is_date]
+ ## Étape 4.3: colonne "date_obs"
   
-  # Set the column 'date_obs' to the correct format
+  # Mettre la colonne "date_obs" dans le format date
   final_data_clean$date <- as.Date(final_data_clean$date_obs, format = "%Y-%m-%d")
   
-  # Check if the data in the 'date_obs' column is in the correct format yyy-mm-dd
+  # Vérifier si la colonne "date_obs" est dans le format yyy-mm-dd
   is_date <- !is.na(ymd(final_data_clean$date_obs, quiet = TRUE))
   table(is_date)
   
-  # Display rows with non-conforming dates
-  final_data_clean$date_obs[!is_date]
+ ## Étape 4.4: colonne "heure"
   
-  # Standardize the column 'heure_obs'
+  # Standardiser la colonne heure
   final_data_clean$heure_obs <- gsub("h", ":", final_data_clean$heure_obs)
   
  
   return(final_data_clean)
+
 }
