@@ -74,11 +74,11 @@ list(
     
   ),
   
-  # Rmarkdown
+   #Rmarkdown
   
   tar_render(
     name = Projet_final_BIO500,
-    path = "BIO500Benthos/Projet_final_BIO500.Rmd"
+    path = "Projet_final_BIO500.Rmd"
     
   )
 )
