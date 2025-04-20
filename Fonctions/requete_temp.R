@@ -10,7 +10,8 @@ source("Fonctions/creer_tables.R")
 ### Étape 2: Faire les requête ###
 
 #Requête richesse spécifique par site en fonction de la température
-fonction_requete_temp <- function(con) {
+fonction_requete_temp <- function(db_path= "reseau.db") {
+  con <-dbConnect(SQLite(), dbname="db_path")
 Requete_temperature <- "
   SELECT 
       COUNT(DISTINCT b.nom_sci) AS richesse_specifique,
