@@ -10,8 +10,9 @@ abline(lm(richesse_specifique ~ temperature_eau_c, data = Requete_temperature), 
 
 
 
-# graphique de la richesses spécifique en fonction de la profondeur
 
+# graphique de la richesses spécifique en fonction de la profondeur
+library(ggplot2)
 library(dplyr)
 # Créer des intervalles de profondeur
 Requete_profondeur$intervalle_profondeur<- cut(
@@ -40,6 +41,7 @@ ggplot(richesse_moyenne_selon_profondeur, aes(x = intervalle_profondeur, y = ric
   theme_minimal()
 
 
+summary(lm(richesse_specifique ~ profondeur_riviere, data = Requete_profondeur))
 
 
 # graphique de la richesses spécifique en fonction de la vitesse du courant
@@ -71,7 +73,7 @@ ggplot(Requete_courant_clean, aes(x = richesse_specifique, fill = classe_courant
 
 
 
-
+summary(lm(richesse_specifique ~ vitesse_courant, data = Requete_courant))
 
 
 
