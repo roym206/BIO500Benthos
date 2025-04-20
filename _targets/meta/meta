@@ -8,6 +8,7 @@ directory_path|object|236b02677349a215|||||||||||||||
 .Random.seed|object|9339c036ce3f7d02|||||||||||||||
 con|object|1db8d3e2111cdec1|||||||||||||||
 >>>>>>> a6a29b759c6464d8617504fd2d218739c6b1b39e|||||||||||||||||
+<<<<<<< HEAD
 final_data_clean|stem|d6956cc8a4afc23b|6181e11d529f7575|160864b1847eb79f|1084875118||t20198.9380618692s|s9459b|9459|rds|local|vector|||0.311||
 Projet_final_BIO500|stem|b4219f8e426c5f4a|ab3562553271755d|2c530c1562a7fbd1|438775412|Projet_final_BIO500.pdf*Projet_final_BIO500.Rmd|t20198.9381257694s|s179756b|179756|file|local|vector|||5.488||
 Graphique_richesseXtemperature|stem|e3e4e52d6156da7b|b957a47afb4c58f0|2858bc4b8b6620b0|-925537751||t20198.9381279442s|s96573b|96573|rds|local|vector|||0.032||
@@ -18,10 +19,20 @@ Requete_courant|stem|e3e5b81e16f877ef|2760f912ad010152|ba77743158f69f36|19600474
 reseau.db|stem|ca2d0f4ec548ccf2|b1e3566df602b1df|85d42fac641129da|-1298146701||t20195.6770020156s||717|rds|local|vector|||0.064||table benthos already exists
 fonction_requete_cou|function|4c38530b5705d961
 fonction_requete_pro|function|b25c013ebb4148a8
+=======
+final_data_clean|stem|2599d94c29d3bcfa|6181e11d529f7575|160864b1847eb79f|1084875118||t20198.894263651s|s9461b|9461|rds|local|vector|||1.25||
+Projet_final_BIO500|stem|8541fe7f544d7680|ab3562553271755d|2c530c1562a7fbd1|438775412|Projet_final_BIO500.pdf*Projet_final_BIO500.Rmd|t20198.8954497467s|s179685b|179685|file|local|vector|||17.484||
+fonction_requete_cou|function|028dbc660d6f5b2e
+fonction_requete_pro|function|0223a8c9ef048baf
+>>>>>>> 1519290a43106d06de67d29ca5a9297a65b6afc1
 graphique_richesse_temperature|function|2f972481ac6702e6
 fonction_requete_temp|function|7a78ad32b5ea5303
 creerBD|function|1bb08d5d65e81327
 process_data|function|b3db11683335bf9e
 graphique_richesse_profondeur|function|fd9157dacfb9ad8d
 graphique_richesse_courant|function|fafba00293b31fc0
+<<<<<<< HEAD
 Requete_temperature|stem|cebf55124eeed6a5|0b2385101be46c17|dca2da5a53d27571|-484512097||t20198.9492694098s||373|rds|local|vector|||0.198||no such table: benthos
+=======
+Requete_temperature|stem||0b2385101be46c17|4e6ae9ee354deca8|-484512097||t20195.7220078589s||0|rds|local|vector|||0.5||impossible de trouver une méthode héritée pour la fonction 'dbGetQuery' pour la signature 'conn = "character", statement = "character"'
+>>>>>>> 1519290a43106d06de67d29ca5a9297a65b6afc1
