@@ -83,5 +83,6 @@ process_data <- function(directory_path) {
   # Standardize the column 'heure_obs'
   final_data_clean$heure_obs <- gsub("h", ":", final_data_clean$heure_obs)
   
+ 
   return(final_data_clean)
 }
