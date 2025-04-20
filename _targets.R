@@ -5,13 +5,15 @@
 
   #Appeler les libraries
   library(targets)
+  library(tarchetypes)
+  
   #Appeler les scripts
   source('Fonctions/fonction_nettoyerdata.R')
   source('Fonctions/creer_tables.R')
   source('Fonctions/requete_temp.R')
   source('Fonctions/graphique.R')
   # source('Fonctions/figure_resume.R')
-  tar_option_set(packages = c("dplyr", "readr", "DBI", "RSQLite", "janitor", "ggplot2"))  #mettre les libraries qu'on aura besoin dans le target dans le vecteur (c())
+  tar_option_set(packages = c("dplyr", "readr", "DBI", "RSQLite", "janitor", "ggplot2", "rmarkdown", "knitr"))  #mettre les libraries qu'on aura besoin dans le target dans le vecteur (c())
 
 #Étape 2 : créer le target pour automatiser le pipeline
 list(
@@ -71,6 +73,15 @@ list(
     command = graphique_richesse_profondeur(Requete_profondeur)
     
   ),
+  
+  # Rmarkdown
+  
+  tar_render(
+    name = Projet_final_BIO500,
+    path = "BIO500Benthos/Projet_final_BIO500.Rmd"
+    
+  )
+)
   
   
   
