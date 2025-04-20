@@ -9,6 +9,7 @@
   source('Fonctions/fonction_nettoyerdata.R')
   source('Fonctions/creer_tables.R')
   source('Fonctions/requete_temp.R')
+  source('Fonctions/graphique.R')
   # source('Fonctions/figure_resume.R')
   tar_option_set(packages = c("dplyr", "readr", "DBI", "RSQLite", "janitor", "ggplot2"))  #mettre les libraries qu'on aura besoin dans le target dans le vecteur (c())
 
@@ -45,9 +46,20 @@ list(
     name = Requete_profondeur,
     command = fonction_requete_pro(reseau.db$con)
   
-  )
+  ),
   
-  #
+  # Graphique richesse en fonction de la température
+  
+  tar_target(
+    name = Graphique_richesseXtemperature,
+    command = graphique_richesse_temperature(Requete_temperature)
+    
+  ))
+  
+  
+  
+  
+  
   
   # Ensuite créer le fichier Rmarkdown
 #)
