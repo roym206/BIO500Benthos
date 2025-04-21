@@ -71,8 +71,8 @@ temperature_eau_c   REAL
   tbl_benthos <- dplyr::tbl(con, "benthos")
   tbl_emplacement <- dplyr::tbl(con, "emplacement")
   
-  dbDisconnect(con)
-  Retourner les objets
+ # dbDisconnect(con)
+  #Retourner les objets
   return(list(
     tbl_benthos = tbl_benthos,
     tbl_emplacement = tbl_emplacement,
@@ -80,7 +80,7 @@ temperature_eau_c   REAL
   ))
 
   # Déconnexion de la BD
-  #dbDisconnect(con)
+  dbDisconnect(con)
   
   # Retourner les deux bases de données pour le target
   # return(list(
