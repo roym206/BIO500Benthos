@@ -19,20 +19,31 @@ list(
     # Une target pour importer et nettoyer les données
   tar_target(
     name = final_data_clean,
-    command = process_data("DATA")
+    command = process_data("DATA"),
+    cue = tar_cue("always")
   ),
+  
+  tar_target(
+    name = con,
+    command = dbConnect(SQLite(), dbname= "reseau.db"),
+    cue = tar_cue("always")
+    
+  ),
+  
   
   #Créer nos tables SQL
   tar_target(
     name = reseau.db,
-    command = creerBD(final_data_clean, db_name = "reseau.db")
+    command = creerBD(final_data_clean, db_name = "reseau.db"),
+    cue = tar_cue("always")
   ),
   
   #requête température
   tar_target(
     name = Requete_temperature,
     command = fonction_requete_temp("reseau.db"),
-    format = "rds"
+    format = "rds",
+    cue = tar_cue("always")
     
   ),
 
@@ -40,7 +51,8 @@ list(
   tar_target(
     name = Requete_courant,
     command = fonction_requete_cou("reseau.db"),
-    format = "rds"
+    format = "rds",
+    cue = tar_cue("always")
     
 
   ),
@@ -49,9 +61,16 @@ list(
   tar_target(
     name = Requete_profondeur,
     command = fonction_requete_pro("reseau.db"),
-    format = "rds"
+    format = "rds",
+    cue = tar_cue("always")
     
   
+  ),
+  
+  tar_target(
+    name = disc,
+    command = dbDisconnect(con),
+    cue = tar_cue("always")
   ),
   
   # Graphique richesse en fonction de la température
@@ -77,6 +96,8 @@ list(
     command = graphique_richesse_profondeur(Requete_profondeur)
     
   ),
+  
+  
   
    #Rmarkdown
   

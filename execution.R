@@ -17,8 +17,10 @@ dbGetQuery(db_objects$con, "SELECT * FROM benthos")
 
 
 
-targets::tar_errored()
 
 
 
-tar_meta(Requete_temperature, fields = error)
+
+
+
+

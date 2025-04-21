@@ -45,7 +45,7 @@ ETIQSTATION CHARACTER(20),
 FOREIGN KEY (site, date_obs) REFERENCES emplacement(site, date_obs)
 );"
 
-dbSendQuery(con, tbl_benthos)
+dbSendQuery(con, benthos)
 
 ## Étape 2.3: Créer la table emplacement
 tbl_emplacement <-"
@@ -59,7 +59,7 @@ vitesse_courant     REAL,
 transparence_eau    VARCHAR(20),
 temperature_eau_c   REAL
 );"
-dbSendQuery(con, tbl_emplacement)
+dbSendQuery(con, emplacement)
 
 
 ### Étape 3: Injecter les données dans les tables ###
@@ -71,15 +71,15 @@ dbWriteTable(con, append = TRUE, name ="benthos", value = data_benthos)
  tbl_benthos <- dplyr::tbl(con, "benthos")
  tbl_emplacement <- dplyr::tbl(con, "emplacement")
  
- # Déconnexion de la BD
- dbDisconnect(con)
- 
+
  # Retourner les objets
  return(list(
-   tbl_benthos = tbl_benthos,
-   tbl_emplacement = tbl_emplacement,
+   tbl_benthos = benthos,
+   tbl_emplacement = emplacement,
    con = con
  ))
+ # Déconnexion de la BD
+ dbDisconnect(con)
  
 }
 
