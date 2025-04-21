@@ -3,7 +3,7 @@
 library(RSQLite)
 library(DBI)
 source("Fonctions/creer_tables.R")
-con <-dbConnect(SQLite(), dbname="db_name")
+#con <-dbConnect(SQLite(), dbname="db_name")
 #<<<<<<< HEAD
 #=======
 #>>>>>>> 1519290a43106d06de67d29ca5a9297a65b6afc1
