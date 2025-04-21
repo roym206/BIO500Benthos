@@ -9,14 +9,22 @@ abondance_esp_transp_e <- "
 
 SELECT nom_sci, abondance
 FROM benthos
+<<<<<<< HEAD
+LEFT JOIN emplacement ON benthos.site = emplacement.site AND benthos.date = emplacement.date
+=======
 LEFT JOIN emplacement ON benthos.site = emplacement.site AND benthos.date_obs = emplacement.date_obs
+>>>>>>> 1519290a43106d06de67d29ca5a9297a65b6afc1
 WHERE transparence_eau LIKE 'ELEVEE'
 
 UNION
 
 SELECT nom_sci, abondance
 FROM benthos
+<<<<<<< HEAD
+RIGHT JOIN emplacement ON benthos.site = emplacement.site AND benthos.date = emplacement.date
+=======
 RIGHT JOIN emplacement ON benthos.site = emplacement.site AND benthos.date_obs = emplacement.date_obs
+>>>>>>> 1519290a43106d06de67d29ca5a9297a65b6afc1
 WHERE transparence_eau LIKE 'ELEVEE'
 ;"
 
@@ -24,6 +32,8 @@ WHERE transparence_eau LIKE 'ELEVEE'
 Requete_transparence_e <- dbGetQuery(con, abondance_esp_transp_e)
   head(Requete_transparence_e)
 
+<<<<<<< HEAD
+=======
   
 #requete pour les abondances dMespèces en fonction de la transparence de l'eau moyenne
   abondance_esp_transp_m <- "
@@ -67,3 +77,4 @@ WHERE transparence_eau LIKE 'FAIBLE'
   
   
   
+>>>>>>> 1519290a43106d06de67d29ca5a9297a65b6afc1

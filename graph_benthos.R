@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+library(ggplot2)
+install.packages("dplyr")
+=======
 library("dplyr")
+>>>>>>> 1519290a43106d06de67d29ca5a9297a65b6afc1
 install.packages("ggridges")
 library("ggridges")
 library("ggplot2")
@@ -7,6 +12,10 @@ library("ggplot2")
 donnees<-read.csv(file="site_100_92_R01_2021-10-01.csv")
 as.data.frame(donnees)
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 1519290a43106d06de67d29ca5a9297a65b6afc1
 #Avec profondeur riviere
 plot1<-ggplot(data= donnees,
               mapping = aes(x = profondeur_riviere, y= abondance, color=nom_sci)
@@ -14,6 +23,11 @@ plot1<-ggplot(data= donnees,
   geom_point()+
   geom_smooth(method="lm")
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 1519290a43106d06de67d29ca5a9297a65b6afc1
 #Avec largeur riviere
 plot2<-ggplot(data= donnees,
               mapping = aes(x = largeur_riviere, y= abondance, color=nom_sci)
@@ -60,3 +74,8 @@ plot6
 #A faire
 #Essayer de comprendre comment ggridge fonctionne (geom_ridgeline()) --> graphique plus smooth. Je crois qu'il faut les donnees de >1 site pour cela.
 #Essayer avec le set de donnees nettoye, car ici c'est pour seulement 1 rivière 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 1519290a43106d06de67d29ca5a9297a65b6afc1

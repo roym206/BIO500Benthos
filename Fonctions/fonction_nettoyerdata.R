@@ -92,6 +92,7 @@ process_data <- function(directory_path) {
   # Standardiser la colonne heure
   final_data_clean$heure_obs <- gsub("h", ":", final_data_clean$heure_obs)
   
+ 
   return(final_data_clean)
 
 }
