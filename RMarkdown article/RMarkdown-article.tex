@@ -82,14 +82,15 @@ City, State, Zip}
 
 \begin{abstract}
 Dans le cadre du cours de Méthodes en écologie computationnelle (BIO500)
-nous avons analysé les données de 43 rivières, récoltées entre 20XX et
-20YY, sur la biodiversité benthique sur les rivières du Québec. Plus
+nous avons analysé les données de 43 rivières, récoltées entre 2016 et
+2021, sur la biodiversité benthique sur les rivières du Québec. Plus
 précisément, nous avons cherché à comprendre comment la diversité
 spécifique du benthos varie en fonction de la vitesse du courant, de la
-profondeur de la rivière et de la température de l'eau. Nos résultats
-démontrent que seule la température de l'eau affecte significativement
-la richesse spécifique du benthos, mais que ce facteur n'explique qu'une
-infime partie de sa variance spatiale.
+profondeur de la rivière et de la température de l'eau. Contrairement à
+ce que nous pensions, les résultats démontrent que seule la température
+de l'eau affecte significativement la richesse spécifique du benthos,
+mais que ce facteur n'explique qu'une infime partie de sa variance
+spatiale.
 \end{abstract}
 
 \dates{This manuscript was compiled on \today}
@@ -113,8 +114,22 @@ infime partie de sa variance spatiale.
 
 \section{Introduction}\label{introduction}
 
-J'ai oublié d'écrire l'introduction mais elle devrait faire entre 150 et
-200 mots
+Les cours d'eau regorgent de petits organismes qu'on ne perçoit pas
+toujours au premier abord, tel que les organismes benthiques. Le benthos
+représente l'ensemble des macro-invertébrés qui vivent dans le fond des
+cours d'eau et des lacs, comme des larves d'insectes, des crustacés et
+des vers. Il est important de faire un suivi des organismes benthiques,
+car ils peuvent être utilisés comme bio-indicateur, afin d'évaluer la
+santé du cours d'eau et qu'ils servent de nourriture pour un grand
+nombre d'animaux (Brysiewicz et al., 2022; MELCCFP, 2025). Cette
+présente recherche cherche à caractériser comment la richesse spécifique
+varie d'une rivière à l'autre au Québec, à l'aide de trois questions
+principales, soit « comment la richesse spécifique du benthos varie en
+fonction de la vitesse du courant », « comment la richesse spécifique du
+benthos varie en fonction de la température de l'eau » et « comment la
+richesse spécifique du benthos varie en fonction de la profondeur de la
+rivière ». Nous pensons que ces trois facteurs devraient influencer la
+richesse spécifique du benthos, de manière positive ou négative.
 
 \section{Méthode}\label{muxe9thode}
 
@@ -125,7 +140,7 @@ année par la suite. Plus précisément, les données qui n'étaient pas
 présentes pour la majorité des rivières ou qui étaient doublées ont été
 éliminées et le format des données a également été homogénéisé. Ensuite,
 diverses requêtes ont été utilisées afin de déterminer comment les
-caractéristiques des rivières affectes la diversité spécifique du
+caractéristiques des rivières affectent la diversité spécifique du
 benthos. Trois régressions linéaires ont été faites, la première étant
 la richesse spécifique du benthos en fonction de la vitesse du courant,
 la deuxième la richesse spécifique du benthos en fonction de la
@@ -134,29 +149,85 @@ benthos en fonction de la température de l'eau. Afin de mieux visualiser
 ces résultats, trois différents tableaux ont été créés. Finalement, le
 tout a été rassemblé sous le format d'article à l'aide de Rmarkdown.
 L'ensemble de l'analyse et du nettoyage des données a été fait à l'aide
-du logiciel R studio (version). Les package x y z ont été utilisés. La
-totalité du code est disponible sur GitHub. Il faut noter que les
-logiciels Chat GPT (version 4.0) et co-pilot ont été utilisés afin
-d'aider à débugger les codes.
+du logiciel R studio (2024.12.0+467). Les package ``dplyr'', ``readr'',
+``DBI'', ``RSQLite'', ``janitor'', ``ggplot2'', ``rmarkdown'' et
+``knitr'' ont été utilisés. La totalité du code est disponible sur
+GitHub et rassemblée dans un pipeline target. Il faut noter que les
+logiciels Chat GPT(4.0) et co-pilot ont été utilisés afin d'aider à
+débugger les codes.
 
 \section{Résultats}\label{ruxe9sultats}
 
 La richesse spécifique du benthos varie de façon positive avec la
 température de l'eau (pente = 0,5316, p=0,02946). Cependant, cette
 relation n'explique qu'une infime partie de la variation du benthos dans
-les différentes rivières, puisque le R2 est de 0,08632. Pour ce qui est
-des autres régressions, celle de la richesse spécifique en fonction de
-la rivière (p=0,293) et la vitesse du courant (p=0,532) ont
-respectivement des pentes de -0,2350 et 0,4067, mais ces relations ne
-sont pas significatives et ne peuvent donc pas être utilisées pour
-expliquer la variation spatiale du benthos.
+les différentes rivières, puisque le R2 est de 0,08632. Cette relation
+est visible dans le graphique 1.
 
-\#Figure 1 \#Figure 2 \#Figure 3
+FIGURE 1
+
+Pour ce qui est des autres régressions, celle de la richesse spécifique
+en fonction de la rivière (p=0,293) et la vitesse du courant (p=0,532)
+ont respectivement des pentes de -0,2350 et 0,4067, mais ces relations
+ne sont pas significatives et ne peuvent donc pas être utilisées pour
+expliquer la variation spatiale du benthos. La relation entre la
+richesse spécifique et la vitesse du courant est illustrée dans le
+deuxième graphique , où la vitesse a été séparée en différentes
+catégories, afin de mieux illustrer comment elle varie. Puisque cette
+relation n'est pas significative, peu de variation est observée entre
+les différentes catégories, avec une diversité maximale lorsqu'il y a
+entre 0,4 et 0,6m de profondeur. Le troisième graphique quant à lui,
+représente comment la diversité spécifique est distribuée selon
+différentes classes de vitesse de courant : plus le pic d'une courbe est
+vers la droite et plus il est haut, plus la chance de retrouver une
+forte diversité benthique dans cette catégorie de vitesse est
+importante.
+
+FIGURE 2 ET 3
 
 \section{Discussion}\label{discussion}
 
-But : 300-400 mots Profondeur : non significative est étonnant (Tall et
-al., 2016) Vitesse du courant : Température de l'eau :
+Selon nos résultats, la profondeur des rivières n'est pas un élément qui
+permet d'expliquer la différence dans la distribution spatiale du
+benthos, car la corrélation entre les deux variables n'est pas
+significative. Ce résultat nous étonne, car plusieurs études, dont une
+réalisée au Québec, semblent avoir trouvé un lien entre la profondeur et
+la différence en richesse spécifique (Brysiewicz et al., 2022; Tall et
+al., 2016). La profondeur étant liée à d'autres paramètres comme la
+luminosité, la température et la disponibilité en oxygène, un de ces
+facteurs pourrait peut-être mieux expliquer la distribution spatiale du
+benthos. Tel que mentionné dans les résultats, la vitesse du courant
+n'est pas significative non plus. Encore une fois, cela est contraire à
+ce que l'on s'attendait, puisque Barmuta (1990) et Brysiewicz et
+al.~(2022) ont trouvé une relation significative entre ces variables.
+Ensuite, tel que nous l'avions prédit, la température de l'eau a un
+impact sur la richesse spécifique du benthos. Cependant, alors que dans
+les recherches précédentes la température était un facteur important
+expliquant l'évolution spatiale de la diversité benthique, selon notre
+analyse, elle n'explique qu'une très petite partie de cette dernière.
+Hawkins et al.~(1997) et Bonacina et al.~(2023) suggèrent que certains
+taxons ne peuvent tolérer des températures trop extrêmes : une
+régression linéaire simple ne représente peut-être pas la relation entre
+la température de l'eau et la richesse spécifique de la bonne manière,
+ce qui pourrait expliquer pourquoi elle explique peu la dispersion
+spatiale. Ainsi, dans une prochaine analyse, il serait pertinent de
+tenter d'expliquer la relation entre ces deux variables à l'aide d'une
+autre formule, par exemple la formule quadratique, afin de prendre en
+compte la possibilité que l'eau diminue la diversité benthique
+lorsqu'elle est trop froide et trop chaude. De manière semblable, les
+résultats non-significatifs sont peut-être expliqués par le fait que la
+distribution spatiale du benthos a été étudiée en un seul bloc. Il est
+possible que certains taxons soient plus affectés par un paramètre que
+d'autres, ou qu'ils soient affectés de manière contraire, ce qui aurait
+pu nuire à établir une corrélation significative entre la vitesse du
+courant ou la profondeur de la rivière et la richesse spécifique.
+Finalement, il pourrait être intéressant faire des analyses multivariées
+afin de tenter d'avoir des résultats plus significatifs. Soit en prenant
+en compte plusieurs des variables étudiées dans cette présente analyse,
+soit en prenant en compte d'autres facteurs qui n'étaient pas présents
+dans les données récoltées, tel que le niveau d'oxygénation de l'eau ou
+sa concentration en nitrogène, qui sont important pour expliquer la
+diversité du benthos (Brysiewicz et al., 2022).
 
 \section*{References}\label{references}
 \addcontentsline{toc}{section}{References}
@@ -167,151 +238,6 @@ references, including for the SI, should be included in the main
 manuscript file. References appearing in both sections should not be
 duplicated. SI references included in tables should be included with the
 main reference section.
-
-\subsection*{Data Archival}\label{data-archival}
-\addcontentsline{toc}{subsection}{Data Archival}
-
-PNAS must be able to archive the data essential to a published article.
-Where such archiving is not possible, deposition of data in public
-databases, such as GenBank, ArrayExpress, Protein Data Bank, Unidata,
-and others outlined in the Information for Authors, is acceptable.
-
-\subsection*{Language-Editing Services}\label{language-editing-services}
-\addcontentsline{toc}{subsection}{Language-Editing Services}
-
-Prior to submission, authors who believe their manuscripts would benefit
-from professional editing are encouraged to use a language-editing
-service (see list at www.pnas.org/site/authors/language-editing.xhtml).
-PNAS does not take responsibility for or endorse these services, and
-their use has no bearing on acceptance of a manuscript for publication.
-
-\begin{figure}
-\centering
-\includegraphics{frog.png}
-\caption{Placeholder image of a frog with a long example caption to show
-justification setting.{}}
-\end{figure}
-
-\subsection*{Digital Figures}\label{sec:figures}
-\addcontentsline{toc}{subsection}{Digital Figures}
-
-Only TIFF, EPS, and high-resolution PDF for Mac or PC are allowed for
-figures that will appear in the main text, and images must be final
-size. Authors may submit U3D or PRC files for 3D images; these must be
-accompanied by 2D representations in TIFF, EPS, or high-resolution PDF
-format. Color images must be in RGB (red, green, blue) mode. Include the
-font files for any text.
-
-Figures and Tables should be labelled and referenced in the standard way
-using the \texttt{\textbackslash{}label\{\}} and
-\texttt{\textbackslash{}ref\{\}} commands.
-
-Figure \[fig:frog\] shows an example of how to insert a column-wide
-figure. To insert a figure wider than one column, please use the
-\texttt{\textbackslash{}begin\{figure*\}...\textbackslash{}end\{figure*\}}
-environment. Figures wider than one column should be sized to 11.4 cm or
-17.8 cm wide.
-
-\subsection*{Single column equations}\label{single-column-equations}
-\addcontentsline{toc}{subsection}{Single column equations}
-
-Authors may use 1- or 2-column equations in their article, according to
-their preference.
-
-To allow an equation to span both columns, options are to use the
-\texttt{\textbackslash{}begin\{figure*\}...\textbackslash{}end\{figure*\}}
-environment mentioned above for figures, or to use the
-\texttt{\textbackslash{}begin\{widetext\}...\textbackslash{}end\{widetext\}}
-environment as shown in equation \[eqn:example\] below.
-
-Please note that this option may run into problems with floats and
-footnotes, as mentioned in the \href{http://texdoc.net/pkg/cuted}{cuted
-package documentation}. In the case of problems with footnotes, it may
-be possible to correct the situation using commands
-\texttt{\textbackslash{}footnotemark} and
-\texttt{\textbackslash{}footnotetext}.
-
-\[\begin{aligned}
-(x+y)^3&=(x+y)(x+y)^2\\
-       &=(x+y)(x^2+2xy+y^2) \label{eqn:example} \\
-       &=x^3+3x^2y+3xy^3+x^3. 
-\end{aligned}\]
-
-\subsection*{Supporting Information
-(SI)}\label{supporting-information-si}
-\addcontentsline{toc}{subsection}{Supporting Information (SI)}
-
-The main text of the paper must stand on its own without the SI. Refer
-to SI in the manuscript at an appropriate point in the text. Number
-supporting figures and tables starting with S1, S2, etc. Authors are
-limited to no more than 10 SI files, not including movie files. Authors
-who place detailed materials and methods in SI must provide sufficient
-detail in the main text methods to enable a reader to follow the logic
-of the procedures and results and also must reference the online
-methods. If a paper is fundamentally a study of a new method or
-technique, then the methods must be described completely in the main
-text. Because PNAS edits SI and composes it into a single PDF, authors
-must provide the following file formats only.
-
-\subsubsection*{SI Text}\label{si-text}
-\addcontentsline{toc}{subsubsection}{SI Text}
-
-Supply Word, RTF, or LaTeX files (LaTeX files must be accompanied by a
-PDF with the same file name for visual reference).
-
-\subsubsection*{SI Figures}\label{si-figures}
-\addcontentsline{toc}{subsubsection}{SI Figures}
-
-Provide a brief legend for each supporting figure after the supporting
-text. Provide figure images in TIFF, EPS, high-resolution PDF, JPEG, or
-GIF format; figures may not be embedded in manuscript text. When saving
-TIFF files, use only LZW compression; do not use JPEG compression. Do
-not save figure numbers, legends, or author names as part of the image.
-Composite figures must be pre-assembled.
-
-\subsubsection*{3D Figures}\label{d-figures}
-\addcontentsline{toc}{subsubsection}{3D Figures}
-
-Supply a composable U3D or PRC file so that it may be edited and
-composed. Authors may submit a PDF file but please note it will be
-published in raw format and will not be edited or composed.
-
-\subsubsection*{SI Tables}\label{si-tables}
-\addcontentsline{toc}{subsubsection}{SI Tables}
-
-Supply Word, RTF, or LaTeX files (LaTeX files must be accompanied by a
-PDF with the same file name for visual reference); include only one
-table per file. Do not use tabs or spaces to separate columns in Word
-tables.
-
-\subsubsection*{SI Datasets}\label{si-datasets}
-\addcontentsline{toc}{subsubsection}{SI Datasets}
-
-Supply Excel (.xls), RTF, or PDF files. This file type will be published
-in raw format and will not be edited or composed.
-
-\subsubsection*{SI Movies}\label{si-movies}
-\addcontentsline{toc}{subsubsection}{SI Movies}
-
-Supply Audio Video Interleave (avi), Quicktime (mov), Windows Media
-(wmv), animated GIF (gif), or MPEG files and submit a brief legend for
-each movie in a Word or RTF file. All movies should be submitted at the
-desired reproduction size and length. Movies should be no more than 10
-MB in size.
-
-\subsubsection*{Still images}\label{still-images}
-\addcontentsline{toc}{subsubsection}{Still images}
-
-Authors must provide a still image from each video file. Supply TIFF,
-EPS, high-resolution PDF, JPEG, or GIF files.
-
-\subsubsection*{Appendices}\label{appendices}
-\addcontentsline{toc}{subsubsection}{Appendices}
-
-PNAS prefers that authors submit individual source files to ensure
-readability. If this is not possible, supply a single PDF file that
-contains all of the SI associated with the paper. This file type will be
-published in raw format and will not be edited or composed.
 
 \showmatmethods
 \showacknow
