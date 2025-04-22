@@ -45,17 +45,32 @@ list(
   # Graphiques
   tar_target(
     name = Graphique_richesseXtemperature,
-    command = graphique_richesse_temperature(Requete_temperature)
+    command = { 
+      p <- graphique_richesse_temperature(Requete_temperature)
+      ggsave("Figures/Graphique_richesseXtemperature.png", plot = p)
+      "Figures/Graphique_richesseXtemperature.png"
+    },
+    format = "file"
   ),
   
   tar_target(
     name = Graphique_richesseXcourant,
-    command = graphique_richesse_courant(Requete_courant)
+    command = {
+      p <- graphique_richesse_courant(Requete_courant)
+      ggsave("Figures/Graphique_richesseXcourant.png", plot = p)
+      "Figures/Graphique_richesseXcourant.png"
+      },
+    format = "file"
   ),
   
   tar_target(
     name = Graphique_richesseXprofondeur,
-    command = graphique_richesse_profondeur(Requete_profondeur)
+    command = {
+      p <- graphique_richesse_profondeur(Requete_profondeur)
+      ggsave("Figures/Graphique_richesseXprofondeur.png", plot = p)
+      "Figures/Graphique_richesseXprofondeur.png"
+    },
+    format = "file"
   ),
   
   # Rapport RMarkdown

@@ -1,14 +1,16 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
 reseau_db|stem|e016fb94567e9e73|e8caf8e52648941a|976d2ee8844a6903|1509081636|reseau.db|t20199.6195372515s|s147456b|147456|file|local|vector|||0.266|Closing open result set, pending rows. Closing open result set, pending rows|
-Graphique_richesseXtemperature|stem|d75ac20e458681e9|b957a47afb4c58f0|c7ad72616b9d01b2|-925537751||t20199.6195413386s|s96584b|96584|rds|local|vector|||0.016||
 Graphique_richesseXprofondeur|stem|44136467b062c07b|cfaeef796b6a356d|acdf49eb7876c8c4|1421666327||t20199.6195432598s|s89915b|89915|rds|local|vector|||0.047||
 Graphique_richesseXcourant|stem|f7282a27ca53562e|24130e3112c5f260|6a1c7ec0f1a850ad|2020689842||t20199.6195448487s|s92742b|92742|rds|local|vector|||0||
 Requete_temperature|stem|2441eacadadf74cb|089c0b0a4d4d2e8e|76afdf55aa671b1e|-484512097||t20199.6239807464s|s376b|376|rds|local|vector|||0.031||
 Requete_profondeur|stem|1a576547aeb4464f|f2b2de820ffae2d1|7d79d23ff54c31eb|1206212943||t20199.623981901s|s313b|313|rds|local|vector|||0.031||
 Requete_courant|stem|07e8c784faf726ee|8d17a90bc5094850|715479a91524028e|1960047487||t20199.6239827502s|s473b|473|rds|local|vector|||0||
+>>>>>>> 722d7d928e3ef3730ba6d17422ca7801c85b9f47|||||||||||||||||
 <<<<<<< HEAD|||||||||||||||||
 =======|||||||||||||||||
->>>>>>> 722d7d928e3ef3730ba6d17422ca7801c85b9f47|||||||||||||||||
+>>>>>>> eb126368bd24eb5fef5c50dddd73b81325b43a7b|||||||||||||||||
+final_data_clean|stem|2599d94c29d3bcfa|6181e11d529f7575|160864b1847eb79f|1084875118||t20199.6194488465s|s9461b|9461|rds|local|vector|||0.5||
+Projet_final_BIO500|stem|7cd93f006b71342b|f1c40ee675bd1ad8|2c530c1562a7fbd1|438775412|RMarkdown_article/RMarkdown-article.pdf*RMarkdown_article/RMarkdown-article.Rmd|t20200.5793789986s|s220753b|220753|file|local|vector|||7.531|Package sidecap Warning: Package `ragged2e' not found -- expect bad formatting.. Package microtype Warning: Unable to apply patch `eqnum' on input line 98.|
 fonction_requete_cou|function|a26aa15d585839c7
 fonction_requete_pro|function|4f5793a0ec2fe2d0
 graphique_richesse_temperature|function|2f972481ac6702e6
@@ -17,9 +19,4 @@ creerBD|function|800af94b7ab0dc82
 process_data|function|b3db11683335bf9e
 graphique_richesse_profondeur|function|fd9157dacfb9ad8d
 graphique_richesse_courant|function|fafba00293b31fc0
-<<<<<<< HEAD
-final_data_clean|stem|2599d94c29d3bcfa|6181e11d529f7575|160864b1847eb79f|1084875118||t20199.7072692728s|s9461b|9461|rds|local|vector|||0.5||
-Projet_final_BIO500|stem|517ae7fc093fba48|bd6ad3be77af3825|2c530c1562a7fbd1|438775412|Projet_final_BIO500.pdf*Projet_final_BIO500.Rmd|t20199.6195328201s||179684|file|local|vector|||3.01||pandoc document conversion failed with error 99
-=======
-Projet_final_BIO500|stem|517ae7fc093fba48|f1c40ee675bd1ad8|2c530c1562a7fbd1|438775412|Projet_final_BIO500.pdf*Projet_final_BIO500.Rmd|t20199.6195328201s||179684|file|local|vector|||32.219||LaTeX failed to compile RMarkdown-article.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. See RMarkdown-article.log for more info.
->>>>>>> eb126368bd24eb5fef5c50dddd73b81325b43a7b
+Graphique_richesseXtemperature|stem|fb49587bc3040837|bfdb3cb0d8f2352f|c7ad72616b9d01b2|-925537751|Figures/Graphique_richesseXtemperature.png|t20200.5800145509s|s50700b|50700|file|local|vector|||1.843|[1m[22mRemoved 1 row containing non-finite outside the scale range (`stat_smooth()`).. [1m[22mRemoved 1 row containing missing values or values outside the scale range (`geom_point()`).|

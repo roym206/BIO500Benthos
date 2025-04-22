@@ -40,7 +40,7 @@ De plus, nous avons analysé certaines données en rapport avec la richesse spé
 
 -   Pour l'exécution du code, nous utilisons les packages suivants : readr, dplyr, lubridate, janitor, stringr, DBI, RSQLite, targets, rmarkdown, knitr et tarchetypes. Bien s'assurer que vous les avez installés préalablement.
 
--   Dans le fichier execution, rouler la commande tar_make() pour exécuter le pipeline de données et obtenir 
+-   Dans le fichier execution, rouler les librairies nécessaires puis la commande tar_make() pour exécuter le pipeline de données et obtenir 
 
 #### [Auteurs et contributeurs :]{.underline}
 
