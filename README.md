@@ -6,7 +6,7 @@ Dans le cadre du cours de Méthodes en écologie computationnelle - BIO500 - nou
 
 Pour ce faire, nous avons donc rassemblé les données récoltées par les équipes sur le terrain, avons nettoyé les données, créer une base de donnée commune où il sera possible d'ajouter les nouvelles données terrain prises à chaque année par la suite.
 
-De plus, nous avons analysé certaines données en rapport avec la richesse spécifique benthique présente selon différentes conditions environnementales. 
+De plus, nous avons analysé certaines données en rapport avec la richesse spécifique benthique présente selon différentes conditions environnementales. Dans le jeu de données actuel, on ne trouve qu'une variable significative qui fait varier la richesse spécifique du benthos : la température de l'eau. Par contre cette dernière n'explique pas toute la variation et des analyses supplémentaires seront bienvenues à la suite de l'acquisition de nouvelles données sur la communauté benthique du Québec.
 
 #### [Structure du répertoire :]{.underline}
 
@@ -18,21 +18,25 @@ De plus, nous avons analysé certaines données en rapport avec la richesse spé
 
 -   Le dossier RMarkdown_article contient le fichier RMarkdown qui permet de générer le rapport final.
 
--   Le dossier _targets contient le fichier de pipeline de données.
-
-
+-   Le dossier \_targets contient les fichiers du pipeline des données.
 
 #### [Descriptions des fichiers :]{.underline}
 
--   benthos_GITHUB_partagee.R : script principal faisant appel aux fonctions
+-   execution.R : script principal qui permet de faire rouler le pipeline.
 
--   creation_table.R : permet de venir créer la table de benthos.
+-   fonction_nettoyerdata.R : permet de venir combiner toutes les données récoltées dans un même fichier et de nettoyer les irrégularités des fichiers de données.
 
--   fonction_combine.R : permet de venir combiner toutes les données récoltées dans un même fichier.
+-   creer_table.R : permet de venir créer les tables SQL.
 
--   supp_na.R : fonction qui vient supprimer les colonnes inutiles, étant donné qu'elles ne contiennent que de NA.
+-   requete_temp.R : fichier contenant les fonctions pour créer les requêtes SQL.
 
--   uniformiser_heures.R : fonction qui permet de mettre les heures toutes dans le même format.
+-   graphique.R : fichier contenant les fonctions qui permettent de créer les graphiques présentés dans le rapport.
+
+-   \_targets.R : fichier de pipeline de données qui permet de créer la base de données et le rapport final.
+
+-   reseau.db : fichier contenant les tables SQL enregistrées.
+
+-   
 
 #### [Instructions :]{.underline}
 
@@ -40,7 +44,9 @@ De plus, nous avons analysé certaines données en rapport avec la richesse spé
 
 -   Pour l'exécution du code, nous utilisons les packages suivants : readr, dplyr, lubridate, janitor, stringr, DBI, RSQLite, targets, rmarkdown, knitr et tarchetypes. Bien s'assurer que vous les avez installés préalablement.
 
--   Dans le fichier execution, rouler les librairies nécessaires puis la commande tar_make() pour exécuter le pipeline de données et obtenir 
+-   Dans le fichier execution.R, rouler les librairies nécessaires puis la commande tar_make() pour exécuter le pipeline de données et obtenir le rapport final en pdf qui apparaîtra dans le dossier RMarkdown_article.
+
+-   Les données se trouvent dans le dossier DATA et y sont accessibles, de même que les fonctions dans le fichier Fonctions qui permettent de créer la base de données nettoyée, les tables SQL, les requêtes et les graphiques. Le pipeline permet l'exécution de tout cela plus rapidement et de passer par-dessus les étapes inchangées.
 
 #### [Auteurs et contributeurs :]{.underline}
 
