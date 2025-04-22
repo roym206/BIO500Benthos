@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.8)  22 APR 2025 00:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.8)  22 APR 2025 00:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1165,15 +1165,13 @@ File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
 
 
 ]
-No file RMarkdown-article.bbl.
-
 
 
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 217.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 215.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.64998pt on input line 217.
+(Font)              scaled to size 6.64998pt on input line 215.
 [2
 
 ] 
@@ -1188,14 +1186,14 @@ Package rerunfilecheck Info: File `RMarkdown-article.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  30433 strings out of 475110
- 571242 string characters out of 5763353
- 1006130 words of memory out of 5000000
- 52668 multiletter control sequences out of 15000+600000
- 640030 words of font info for 177 fonts, out of 8000000 for 9000
+ 571210 string characters out of 5763353
+ 1006131 words of memory out of 5000000
+ 52666 multiletter control sequences out of 15000+600000
+ 640125 words of font info for 178 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  117i,14n,121p,1014b,1114s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/leannebeauregard/Library/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></Users/leannebeauregard/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></Users/leannebeauregard/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb></Users/leannebeauregard/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/leannebeauregard/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></Users/leannebeauregard/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/leannebeauregard/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></Users/leannebeauregard/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></Users/leannebeauregard/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></Users/leannebeauregard/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on RMarkdown-article.pdf (2 pages, 183646 bytes).
+Output written on RMarkdown-article.pdf (2 pages, 181324 bytes).
 PDF statistics:
  97 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream
