@@ -13,8 +13,7 @@ author:
     affiliation: a
 address:
   - code: a
-    address: Univeristé de Sherbrooke, Département de Biologie, Street, City, State, Zip
-
+    address: Univeristé de Sherbrooke, Département de Biologie
 
 # For footer text
 lead_author_surname: Anonymous
