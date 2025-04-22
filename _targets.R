@@ -61,6 +61,6 @@ list(
   # Rapport RMarkdown
   tar_render(
     Projet_final_BIO500, 
-    path = "RMarkdown-article.Rmd"
+    path = "RMarkdown_article/RMarkdown-article.Rmd"
   )
 )
