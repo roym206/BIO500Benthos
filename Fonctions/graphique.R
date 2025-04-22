@@ -55,7 +55,11 @@ graphique_richesse_profondeur <- function(Requete_profondeur) {
       title = "Richesse spécifique moyenne selon la profondeur"
     ) +
     theme_minimal()
-  return(histo_rp)
+ theme(
+   plot.title = element_text(size = 8) 
+  )
+   return(histo_rp)
+ 
 }
 
 
@@ -87,6 +91,9 @@ graphique_richesse_courant <- function(Requete_courant) {
       fill = "Classe de courant (m/s)"
     ) +
     theme_minimal()
+ theme(
+   plot.title = element_text(size = 8) 
+ )
   return(dia_rc)
 }
 
