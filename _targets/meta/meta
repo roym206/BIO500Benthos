@@ -3,14 +3,6 @@ name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iterat
 <<<<<<< HEAD|||||||||||||||||
 =======|||||||||||||||||
 >>>>>>> eb126368bd24eb5fef5c50dddd73b81325b43a7b|||||||||||||||||
-final_data_clean|stem|2599d94c29d3bcfa|6181e11d529f7575|160864b1847eb79f|1084875118||t20199.6194488465s|s9461b|9461|rds|local|vector|||0.5||
-reseau_db|stem|e016fb94567e9e73|e8caf8e52648941a|976d2ee8844a6903|1509081636|reseau.db|t20199.6195372515s|s147456b|147456|file|local|vector|||0.266|Closing open result set, pending rows. Closing open result set, pending rows|
-Requete_temperature|stem|2441eacadadf74cb|089c0b0a4d4d2e8e|76afdf55aa671b1e|-484512097||t20199.6239807464s|s376b|376|rds|local|vector|||0.031||
-Requete_profondeur|stem|1a576547aeb4464f|f2b2de820ffae2d1|7d79d23ff54c31eb|1206212943||t20199.623981901s|s313b|313|rds|local|vector|||0.031||
-Requete_courant|stem|07e8c784faf726ee|8d17a90bc5094850|715479a91524028e|1960047487||t20199.6239827502s|s473b|473|rds|local|vector|||0||
-Graphique_richesseXtemperature|stem|8f48e0406f4dc4f0|b957a47afb4c58f0|6886b6ef70740880|-925537751||t20200.664421s|s96655b|96655|rds|local|vector|||0.031||
-Graphique_richesseXprofondeur|stem|d3e4ef15163c85a1|cfaeef796b6a356d|a5a5cfa32c3eed18|1421666327||t20200.6644237818s|s89976b|89976|rds|local|vector|||0.094||
-Graphique_richesseXcourant|stem|46b838e2a0ff2a70|24130e3112c5f260|7be719b09c520f4c|2020689842||t20200.6644263212s|s92872b|92872|rds|local|vector|||0.031||
 fonction_requete_cou|function|a26aa15d585839c7
 fonction_requete_pro|function|4f5793a0ec2fe2d0
 graphique_richesse_temperature|function|37072b4baeb70321
@@ -19,4 +11,12 @@ creerBD|function|800af94b7ab0dc82
 process_data|function|b3db11683335bf9e
 graphique_richesse_profondeur|function|820b0163a4f6f19e
 graphique_richesse_courant|function|3cc1fd33fb452e42
-Projet_final_BIO500|stem|f7d2830705c83bb4|3ca4e4bff35f537d|c7a10c0dd42e90ba|438775412|RMarkdown_article/RMarkdown-article.pdf*RMarkdown_article/RMarkdown-article.Rmd*RMarkdown_article/RMarkdown-article_files|t20200.6938121703s|s307523b|307523|file|local|vector|||8.218|Package sidecap Warning: Package `ragged2e' not found -- expect bad formatting.. Package microtype Warning: Unable to apply patch `eqnum' on input line 98.|
+final_data_clean|stem|2599d94c29d3bcfa|6181e11d529f7575|160864b1847eb79f|1084875118||t20199.7072692728s|s9461b|9461|rds|local|vector|||0.5||
+reseau_db|stem|e016fb94567e9e73|e8caf8e52648941a|976d2ee8844a6903|1509081636|reseau.db|t20199.7055252349s|s147456b|147456|file|local|vector|||0.266|Closing open result set, pending rows. Closing open result set, pending rows|
+Requete_temperature|stem|2441eacadadf74cb|089c0b0a4d4d2e8e|76afdf55aa671b1e|-484512097||t20199.7072719813s|s376b|376|rds|local|vector|||0.031||
+Requete_profondeur|stem|1a576547aeb4464f|f2b2de820ffae2d1|7d79d23ff54c31eb|1206212943||t20199.7072731085s|s313b|313|rds|local|vector|||0.031||
+Requete_courant|stem|07e8c784faf726ee|8d17a90bc5094850|715479a91524028e|1960047487||t20199.707273566s|s473b|473|rds|local|vector|||0||
+Graphique_richesseXtemperature|stem|d454e2e60a6c9bba|b957a47afb4c58f0|6886b6ef70740880|-925537751||t20200.6951847418s|s96649b|96649|rds|local|vector|||0.02||
+Graphique_richesseXprofondeur|stem|3791c12f9fb36410|cfaeef796b6a356d|a5a5cfa32c3eed18|1421666327||t20200.6951859926s|s89966b|89966|rds|local|vector|||0.05||
+Graphique_richesseXcourant|stem|a7fe43235126fb67|24130e3112c5f260|7be719b09c520f4c|2020689842||t20200.6951874232s|s92871b|92871|rds|local|vector|||0.05||
+Projet_final_BIO500|stem|413a00d581ddd5f9|3ca4e4bff35f537d|7dcd836f382b0c9b|438775412|RMarkdown_article/RMarkdown-article.pdf*RMarkdown_article/RMarkdown-article.Rmd*RMarkdown_article/RMarkdown-article_files|t20200.695307406s|s307529b|307529|file|local|vector|||10.37|Package microtype Warning Unable to apply patch eqnum on input line 98.|
