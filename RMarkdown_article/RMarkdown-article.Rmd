@@ -51,15 +51,27 @@ Résultats
 ========================================
 La richesse spécifique du benthos varie de façon positive avec la température de l’eau (pente = 0,5316, p=0,02946). Cependant, cette relation n’explique qu’une infime partie de la variation du benthos dans les différentes rivières, puisque le R2 est de 0,08632. Cette relation est visible dans le ##\\label{fig:Figure 1}.
 
-```{R, echo=FALSE, message=FALSE, warning=FALSE, fig.width=3, fig.height=3, fig.align='center',fig.cap="Figure 1. Richesse spécifique en fonction de la température de l'eau."}
+```{R, echo=FALSE, message=FALSE, warning=FALSE, fig.width=3, fig.height=3, fig.align='center',fig.cap="Richesse spécifique en fonction de la température de l'eau."}
 data_1_plot <- tar_read(Graphique_richesseXtemperature)
 plot(data_1_plot)
 ```
 
 
 Pour ce qui est des autres régressions, celle de la richesse spécifique en fonction de la rivière (p=0,293) et la vitesse du courant (p=0,532) ont respectivement des pentes de -0,2350 et 0,4067, mais ces relations ne sont pas significatives et ne peuvent donc pas être utilisées pour expliquer la variation spatiale du benthos. La relation entre la richesse spécifique et la vitesse du courant est illustrée dans le deuxième graphique \\label{fig:Figure 2}
-, où la vitesse a été séparée en différentes catégories, afin de mieux illustrer comment elle varie. Puisque cette relation n’est pas significative, peu de variation est observée entre les différentes catégories, avec une diversité maximale lorsqu’il y a entre 0,4 et 0,6m de profondeur. Le \\label{fig:Figure 3}
+, où la vitesse a été séparée en différentes catégories, afin de mieux illustrer comment elle varie. 
+
+```{R, echo=FALSE, message=FALSE, warning=FALSE, fig.width=3, fig.height=3, fig.align='center',fig.cap="Richesse spécifique en fonction de la vitesse du courant."}
+data_2_plot <- tar_read(Graphique_richesseXcourant)
+plot(data_2_plot)
+```
+
+Puisque cette relation n’est pas significative, peu de variation est observée entre les différentes catégories, avec une diversité maximale lorsqu’il y a entre 0,4 et 0,6m de profondeur. Le \\label{fig:Figure 3}
 quant à lui, représente comment la diversité spécifique est distribuée selon différentes classes de vitesse de courant : plus le pic d’une courbe est vers la droite et plus il est haut, plus la chance de retrouver une forte diversité benthique dans cette catégorie de vitesse est importante. 
+
+```{R, echo=FALSE, message=FALSE, warning=FALSE, fig.width=3, fig.height=3, fig.align='center',fig.cap="Richesse spécifique en fonction de la profondeur."}
+data_2_plot <- tar_read(Graphique_richesseXprofondeur)
+plot(data_2_plot)
+```
 
 
 Discussion 

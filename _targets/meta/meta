@@ -8,15 +8,15 @@ reseau_db|stem|e016fb94567e9e73|e8caf8e52648941a|976d2ee8844a6903|1509081636|res
 Requete_temperature|stem|2441eacadadf74cb|089c0b0a4d4d2e8e|76afdf55aa671b1e|-484512097||t20199.7072719813s|s376b|376|rds|local|vector|||0.031||
 Requete_profondeur|stem|1a576547aeb4464f|f2b2de820ffae2d1|7d79d23ff54c31eb|1206212943||t20199.7072731085s|s313b|313|rds|local|vector|||0.031||
 Requete_courant|stem|07e8c784faf726ee|8d17a90bc5094850|715479a91524028e|1960047487||t20199.707273566s|s473b|473|rds|local|vector|||0||
-Graphique_richesseXprofondeur|stem|49ada86995964314|cfaeef796b6a356d|acdf49eb7876c8c4|1421666327||t20200.606469574s|s89893b|89893|rds|local|vector|||0.1||
-Graphique_richesseXcourant|stem|13235df75b89d0f1|24130e3112c5f260|6a1c7ec0f1a850ad|2020689842||t20200.606471398s|s92736b|92736|rds|local|vector|||0.02||
 Graphique_richesseXtemperature|stem|d454e2e60a6c9bba|b957a47afb4c58f0|6886b6ef70740880|-925537751||t20200.6375273185s|s96649b|96649|rds|local|vector|||0.03||
+Graphique_richesseXprofondeur|stem|3791c12f9fb36410|cfaeef796b6a356d|a5a5cfa32c3eed18|1421666327||t20200.6571155321s|s89966b|89966|rds|local|vector|||0.07||
 fonction_requete_cou|function|a26aa15d585839c7
 fonction_requete_pro|function|4f5793a0ec2fe2d0
 graphique_richesse_temperature|function|37072b4baeb70321
 fonction_requete_temp|function|f87f1ef3fb8e96a3
 creerBD|function|800af94b7ab0dc82
 process_data|function|b3db11683335bf9e
-graphique_richesse_profondeur|function|fd9157dacfb9ad8d
-graphique_richesse_courant|function|fafba00293b31fc0
-Projet_final_BIO500|stem|2f5a8c0dbf885e78|3e16d3f95e7721c8|3bbd54fac8c79f4d|438775412|RMarkdown_article/RMarkdown-article.pdf*RMarkdown_article/RMarkdown-article.Rmd*RMarkdown_article/RMarkdown-article_files|t20200.6420458162s|s235892b|235892|file|local|vector|||8.56|Package microtype Warning Unable to apply patch eqnum on input line 98.|
+graphique_richesse_profondeur|function|820b0163a4f6f19e
+graphique_richesse_courant|function|3cc1fd33fb452e42
+Graphique_richesseXcourant|stem|a7fe43235126fb67|24130e3112c5f260|7be719b09c520f4c|2020689842||t20200.6615582767s|s92871b|92871|rds|local|vector|||0.04||
+Projet_final_BIO500|stem|61a7ec122e2e4a8b|3ca4e4bff35f537d|7dcd836f382b0c9b|438775412|RMarkdown_article/RMarkdown-article.pdf*RMarkdown_article/RMarkdown-article.Rmd*RMarkdown_article/RMarkdown-article_files|t20200.6616700828s|s279252b|279252|file|local|vector|||9.64|Package microtype Warning Unable to apply patch eqnum on input line 98.|

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.22)  22 APR 2025 11:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.22)  22 APR 2025 11:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1138,7 +1138,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.64998pt on input line 172.
 
 
-LaTeX Font Info:    Trying to load font information for T1+bch on input line 191.
+LaTeX Font Info:    Trying to load font information for T1+bch on input line 184.
 (c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 ) (c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-bch.cfg
@@ -1147,56 +1147,70 @@ File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
 
 
  <./RMarkdown-article_files/figure-latex/unnamed-chunk-1-1.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<RMarkdown-article_files/figure-latex/unnamed-chunk-2-1.pdf, id=49, 216.81pt x 216.81pt>
+File: RMarkdown-article_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type pdf)
+<use RMarkdown-article_files/figure-latex/unnamed-chunk-2-1.pdf>
+Package pdftex.def Info: RMarkdown-article_files/figure-latex/unnamed-chunk-2-1.pdf  used on input line 187.
+(pdftex.def)             Requested size: 216.80946pt x 216.80946pt.
+<RMarkdown-article_files/figure-latex/unnamed-chunk-3-1.pdf, id=50, 216.81pt x 216.81pt>
+File: RMarkdown-article_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pdf)
+<use RMarkdown-article_files/figure-latex/unnamed-chunk-3-1.pdf>
+Package pdftex.def Info: RMarkdown-article_files/figure-latex/unnamed-chunk-3-1.pdf  used on input line 205.
+(pdftex.def)             Requested size: 216.80946pt x 216.80946pt.
 
 
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 246--252
+Underfull \hbox (badness 10000) in paragraph at lines 266--272
 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 257.
+(Font)              scaled to size 7.59998pt on input line 277.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 257.
+(Font)              <8> on input line 277.
 
-Underfull \hbox (badness 3460) in paragraph at lines 257--257
+Underfull \hbox (badness 3460) in paragraph at lines 277--277
 []\T1/lmr/m/n/8 (+20) MELCCFP Macroin-vertébrés ben-thiques. Avail-able
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--257
+Underfull \hbox (badness 10000) in paragraph at lines 277--277
 \T1/lmr/m/n/8 (+20) at: [][][]$\T1/phv/m/n/8 (+20) https : / / www . environnement . gouv . qc . ca / eau / eco _ aqua /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--258
+Underfull \hbox (badness 10000) in paragraph at lines 274--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--266
+Underfull \hbox (badness 10000) in paragraph at lines 280--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--274
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 276--281
+Underfull \hbox (badness 10000) in paragraph at lines 288--294
 
  []
 
 
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 289.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 294.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.64998pt on input line 289.
-[2] 
+(Font)              scaled to size 6.64998pt on input line 294.
+[2 <./RMarkdown-article_files/figure-latex/unnamed-chunk-2-1.pdf> <./RMarkdown-article_files/figure-latex/unnamed-chunk-3-1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 296--301
+
+ []
+
+
+
+
+
+[3
+
+] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./RMarkdown-article.aux)
  ***********
@@ -1207,18 +1221,18 @@ Package rerunfilecheck Info: File `RMarkdown-article.out' has not changed.
 (rerunfilecheck)             Checksum: 3E62D94F3FCE9944B276FC016B4598F1;461.
  ) 
 Here is how much of TeX's memory you used:
- 30516 strings out of 471546
- 572471 string characters out of 5517580
- 987699 words of memory out of 5000000
- 56281 multiletter control sequences out of 15000+600000
- 717240 words of font info for 201 fonts, out of 8000000 for 9000
+ 30537 strings out of 471546
+ 573727 string characters out of 5517580
+ 986699 words of memory out of 5000000
+ 56301 multiletter control sequences out of 15000+600000
+ 717151 words of font info for 200 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  117i,14n,121p,1014b,1114s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri8.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on RMarkdown-article.pdf (2 pages, 218906 bytes).
+Output written on RMarkdown-article.pdf (3 pages, 240026 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
- 14 named destinations out of 1000 (max. 500000)
- 67130 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 152 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
+ 17 named destinations out of 1000 (max. 500000)
+ 67140 words of extra memory for PDF output out of 74296 (max. 10000000)
 
