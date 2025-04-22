@@ -1,6 +1,6 @@
 
+### Étape 1: Créer une fonction pour faire un graphique de la richesse spécifique en fonction de la température ###
 
-# Fonction pour créer un graphique de la richesse spécifique en fonction de la température
 graphique_richesse_temperature <- function(Requete_temperature) {
   
   
@@ -21,11 +21,8 @@ graphique_richesse_temperature <- function(Requete_temperature) {
   return(graphique_rt)
 }
 
+### Étape 2: Créer une fonction pour faire un histogramme de la richesse spécifique en fonction de la profondeur ###
 
-
-
-
-# Fonction pour créer un graphique de la richesse spécifique en fonction de la profondeur
 graphique_richesse_profondeur <- function(Requete_profondeur) {
  
   
@@ -62,10 +59,8 @@ graphique_richesse_profondeur <- function(Requete_profondeur) {
  
 }
 
+### Étape 3: Créer une fonction pour faire un diagramme de la richesse spécifique en fonction de la vitesse du courant ###
 
-
-
-# Fonction pour créer un graphique de la richesse spécifique en fonction de la vitesse du courant
 graphique_richesse_courant <- function(Requete_courant) {
  
   
@@ -98,11 +93,3 @@ graphique_richesse_courant <- function(Requete_courant) {
  )
   return(dia_rc)
 }
-
-
-
-
-
-
-
-
