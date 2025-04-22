@@ -8,6 +8,8 @@ Pour ce faire, nous avons donc rassemblé les données récoltées par les équi
 
 De plus, nous avons analysé certaines données en rapport avec la richesse spécifique benthique présente selon différentes conditions environnementales. Dans le jeu de données actuel, on ne trouve qu'une variable significative qui fait varier la richesse spécifique du benthos : la température de l'eau. Par contre cette dernière n'explique pas toute la variation et des analyses supplémentaires seront bienvenues à la suite de l'acquisition de nouvelles données sur la communauté benthique du Québec.
 
+[Avertissement :]{.underline} On a rencontré une problématique lors de la création de notre fichier PDF : les graphiques que nous avions créés précédement pour faire l'analyse, avant de les mettre dans le rapport ne sont pas les mêmes que ceux dans le rapport, même si nous n'avons pas changé le code. Ce qui fait que l'analyse des graphiques ne concorde pas avec les résultats.
+
 #### [Structure du répertoire :]{.underline}
 
 -   Les fichiers CSV de données ont été mises dans le dossier DATA.
