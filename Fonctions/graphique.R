@@ -92,7 +92,9 @@ graphique_richesse_courant <- function(Requete_courant) {
     ) +
     theme_minimal()
  theme(
-   plot.title = element_text(size = 8) 
+   plot.title = element_text(size = 8), 
+   legend.text = element_text(size = 6),
+   legend.title = element_text(size = 7)
  )
   return(dia_rc)
 }
