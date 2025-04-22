@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.22)  22 APR 2025 11:02
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.22)  22 APR 2025 10:10
+>>>>>>> dd4bd4b9a28504a735bb398a3f49fd09682328b1
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -933,7 +937,8 @@ Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 Package: pnasresearcharticle 2018/05/06 v1.3 PNAS two column research article style
 \@float@every@sigstatement=\toks54
 \c@sigstatement=\count381
-) (./RMarkdown-article.aux)
+)
+No file RMarkdown-article.aux.
 \openout1 = `RMarkdown-article.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
@@ -961,7 +966,6 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring ON on input line 98.
-(./RMarkdown-article.out) (./RMarkdown-article.out)
 \@outlinefile=\write4
 \openout4 = `RMarkdown-article.out'.
 
@@ -1127,8 +1131,12 @@ Package mdframed Info: mdframed inside float
  mdframed uses option nobreak mdframed on input line 157.
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 157.
+
+LaTeX Warning: Reference `mdf@pagelabel-1' on page 1 undefined on input line 157.
+
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 5.69998pt on input line 157.
+<<<<<<< HEAD
 <RMarkdown-article_files/figure-latex/unnamed-chunk-1-1.pdf, id=26, 216.81pt x 216.81pt>
 File: RMarkdown-article_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type pdf)
 <use RMarkdown-article_files/figure-latex/unnamed-chunk-1-1.pdf>
@@ -1140,12 +1148,37 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.64998pt on input line 184.
 LaTeX Font Info:    Trying to load font information for T1+bch on input line 184.
 (c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1bch.fd
+=======
+<../Figures/Graphique_richesseXtemperature.png, id=7, 505.89pt x 505.89pt>
+File: ../Figures/Graphique_richesseXtemperature.png Graphic file (type png)
+<use ../Figures/Graphique_richesseXtemperature.png>
+Package pdftex.def Info: ../Figures/Graphique_richesseXtemperature.png  used on input line 166.
+(pdftex.def)             Requested size: 404.56587pt x 675.95154pt.
+
+Overfull \hbox (170.46901pt too wide) in paragraph at lines 166--167
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.64998pt on input line 168.
+
+LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 168.
+
+LaTeX Font Info:    Trying to load font information for T1+bch on input line 168.
+(c:/Users/momor/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1bch.fd
+>>>>>>> dd4bd4b9a28504a735bb398a3f49fd09682328b1
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 ) (c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-bch.cfg
 File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
 ) [1{c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}
 
 
+<<<<<<< HEAD
  <./RMarkdown-article_files/figure-latex/unnamed-chunk-1-1.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 239--245
 
@@ -1169,9 +1202,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 250--250
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 247--251
+=======
+]
 
- []
 
+LaTeX Warning: File `../Figures/Graphique_richesseXcourant.png' not found on input line 185.
+
+
+! Package pdftex.def Error: File `../Figures/Graphique_richesseXcourant.png' not found: using draft setting.
+>>>>>>> dd4bd4b9a28504a735bb398a3f49fd09682328b1
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.185 ..../Figures/Graphique_richesseXcourant.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<<<<<<< HEAD
 
 Underfull \hbox (badness 10000) in paragraph at lines 253--259
 
@@ -1219,3 +1269,15 @@ PDF statistics:
  13 named destinations out of 1000 (max. 500000)
  67130 words of extra memory for PDF output out of 74296 (max. 10000000)
 
+=======
+ 
+Here is how much of TeX's memory you used:
+ 30313 strings out of 471564
+ 569586 string characters out of 5518373
+ 983634 words of memory out of 5000000
+ 56154 multiletter control sequences out of 15000+600000
+ 700436 words of font info for 162 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 117i,15n,121p,1014b,1113s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
+>>>>>>> dd4bd4b9a28504a735bb398a3f49fd09682328b1
