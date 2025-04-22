@@ -17,5 +17,9 @@ creerBD|function|800af94b7ab0dc82
 process_data|function|b3db11683335bf9e
 graphique_richesse_profondeur|function|fd9157dacfb9ad8d
 graphique_richesse_courant|function|fafba00293b31fc0
+<<<<<<< HEAD
 final_data_clean|stem|2599d94c29d3bcfa|6181e11d529f7575|160864b1847eb79f|1084875118||t20199.7072692728s|s9461b|9461|rds|local|vector|||0.5||
 Projet_final_BIO500|stem|517ae7fc093fba48|bd6ad3be77af3825|2c530c1562a7fbd1|438775412|Projet_final_BIO500.pdf*Projet_final_BIO500.Rmd|t20199.6195328201s||179684|file|local|vector|||3.01||pandoc document conversion failed with error 99
+=======
+Projet_final_BIO500|stem|517ae7fc093fba48|f1c40ee675bd1ad8|2c530c1562a7fbd1|438775412|Projet_final_BIO500.pdf*Projet_final_BIO500.Rmd|t20199.6195328201s||179684|file|local|vector|||32.219||LaTeX failed to compile RMarkdown-article.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. See RMarkdown-article.log for more info.
+>>>>>>> eb126368bd24eb5fef5c50dddd73b81325b43a7b
