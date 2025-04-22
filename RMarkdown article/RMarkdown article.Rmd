@@ -30,7 +30,7 @@ keywords:
 ## must be one of: pnasresearcharticle (usual two-column layout), pnasmathematics (one column layout), or pnasinvited (invited submissions only)
 pnas_type: pnasresearcharticle
 
-bibliography: reference bio500.bib
+bibliography: ref.bio500.bib
 csl: pnas.csl
 
 ## change to true to add optional line numbering

@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.8)  22 APR 2025 00:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.22)  22 APR 2025 01:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **RMarkdown-article.tex
 (./RMarkdown-article.tex
 LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
+L3 programming layer <2025-03-26>
 
 ! LaTeX Error: File `pnas-new.cls' not found.
 
@@ -22,11 +22,11 @@ l.2 ^^M
 
  
 Here is how much of TeX's memory you used:
- 19 strings out of 475110
- 464 string characters out of 5763353
- 387063 words of memory out of 5000000
- 23131 multiletter control sequences out of 15000+600000
- 558837 words of font info for 36 fonts, out of 8000000 for 9000
+ 19 strings out of 471546
+ 464 string characters out of 5517466
+ 423118 words of memory out of 5000000
+ 26694 multiletter control sequences out of 15000+600000
+ 626825 words of font info for 40 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  19i,0n,29p,101b,17s stack positions out of 10000i,1000n,20000p,200000b,200000s
 !  ==> Fatal error occurred, no output PDF file produced!
