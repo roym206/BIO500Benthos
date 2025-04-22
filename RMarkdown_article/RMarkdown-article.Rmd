@@ -51,7 +51,7 @@ Résultats
 ========================================
 La richesse spécifique du benthos varie de façon positive avec la température de l’eau (pente = 0,5316, p=0,02946). Cependant, cette relation n’explique qu’une infime partie de la variation du benthos dans les différentes rivières, puisque le R2 est de 0,08632. Cette relation est visible dans le ##\\label{fig:Figure 1}.
 
-```{R, echo=FALSE, message=FALSE, warning=FALSE, fig.width=3, fig.height=3, fig.align='center'}
+```{R, echo=FALSE, message=FALSE, warning=FALSE, fig.width=3, fig.height=3, fig.align='center',fig.cap="Figure 1. Richesse spécifique en fonction de la température de l'eau."}
 data_1_plot <- tar_read(Graphique_richesseXtemperature)
 plot(data_1_plot)
 ```

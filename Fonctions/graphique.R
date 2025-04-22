@@ -11,9 +11,12 @@ graphique_richesse_temperature <- function(Requete_temperature) {
     labs(   
        x = "Température de l'eau (°C)",
        y = "Richesse spécifique",
-       title [Label = "<<B> Richesse spécifique en fonction <BR/> de la température</B>>"]
+       title = "Richesse spécifique en fonction de la température"
     ) +
-      theme_minimal()
+      theme_minimal()+
+    theme(
+      plot.title = element_text(size = 8)  
+    )
   
   return(graphique_rt)
 }
