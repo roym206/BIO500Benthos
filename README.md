@@ -6,7 +6,7 @@ Dans le cadre du cours de Méthodes en écologie computationnelle - BIO500 - nou
 
 Pour ce faire, nous avons donc rassemblé les données récoltées par les équipes sur le terrain, avons nettoyé les données, créer une base de donnée commune où il sera possible d'ajouter les nouvelles données terrain prises à chaque année par la suite.
 
-AJOUTER DES RÉSULTATS ?
+De plus, nous avons analysé certaines données en rapport avec la richesse spécifique benthique présente selon différentes conditions environnementales. 
 
 #### [Structure du répertoire :]{.underline}
 
@@ -14,7 +14,13 @@ AJOUTER DES RÉSULTATS ?
 
 -   Les fonctions créées pour ajuster la base de données ont été mises dans le dossier Fonctions.
 
-RESSOURCES NÉCESSAIRES ?
+-   Le dossier latex permet de la rédaction et l'exécution du rapport final.
+
+-   Le dossier RMarkdown_article contient le fichier RMarkdown qui permet de générer le rapport final.
+
+-   Le dossier _targets contient le fichier de pipeline de données.
+
+
 
 #### [Descriptions des fichiers :]{.underline}
 
@@ -32,11 +38,9 @@ RESSOURCES NÉCESSAIRES ?
 
 -   Premièrement, s'assurer d'avoir bien mis son working directory dans le projet en question
 
--   Pour l'exécution du code, nous utilisons les packages suivants : readr, dplyr, lubridate, janitor et stringr. Bien s'assurer que vous les avez installés préalablement.
+-   Pour l'exécution du code, nous utilisons les packages suivants : readr, dplyr, lubridate, janitor, stringr, DBI, RSQLite, targets, rmarkdown, knitr et tarchetypes. Bien s'assurer que vous les avez installés préalablement.
 
--   Les données se trouvent dans le fichier DATA.
-
--   COMMENT REPRODUIRE LES RÉSULTATS ?
+-   Dans le fichier execution, rouler la commande tar_make() pour exécuter le pipeline de données et obtenir 
 
 #### [Auteurs et contributeurs :]{.underline}
 
