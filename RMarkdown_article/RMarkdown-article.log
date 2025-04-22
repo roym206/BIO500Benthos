@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.8)  22 APR 2025 09:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.8)  22 APR 2025 09:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1133,8 +1133,8 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 
 
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.64998pt on input line 230.
-LaTeX Font Info:    Trying to load font information for T1+bch on input line 230.
+(Font)              scaled to size 6.64998pt on input line 233.
+LaTeX Font Info:    Trying to load font information for T1+bch on input line 233.
 (c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 ) (c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-bch.cfg
@@ -1143,41 +1143,41 @@ File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 241--247
+Underfull \hbox (badness 10000) in paragraph at lines 244--250
 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 252.
+(Font)              scaled to size 7.59998pt on input line 255.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 252.
+(Font)              <8> on input line 255.
 
-Underfull \hbox (badness 3460) in paragraph at lines 252--252
+Underfull \hbox (badness 3460) in paragraph at lines 255--255
 []\T1/lmr/m/n/8 (+20) MELCCFP Macroin-vertébrés ben-thiques. Avail-able
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--252
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
 \T1/lmr/m/n/8 (+20) at: [][][]$\T1/phv/m/n/8 (+20) https : / / www . environnement . gouv . qc . ca / eau / eco _ aqua /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--253
+Underfull \hbox (badness 10000) in paragraph at lines 252--256
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--261
+Underfull \hbox (badness 10000) in paragraph at lines 258--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--269
+Underfull \hbox (badness 10000) in paragraph at lines 266--272
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--276
+Underfull \hbox (badness 10000) in paragraph at lines 274--279
 
  []
 
@@ -1186,9 +1186,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 271--276
 
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 284.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 287.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.64998pt on input line 284.
+(Font)              scaled to size 6.64998pt on input line 287.
 [2] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./RMarkdown-article.aux)
@@ -1200,15 +1200,15 @@ Package rerunfilecheck Info: File `RMarkdown-article.out' has not changed.
 (rerunfilecheck)             Checksum: 3E62D94F3FCE9944B276FC016B4598F1;461.
  ) 
 Here is how much of TeX's memory you used:
- 30515 strings out of 475109
- 572258 string characters out of 5761702
+ 30513 strings out of 475109
+ 572238 string characters out of 5761702
  1006191 words of memory out of 5000000
  52714 multiletter control sequences out of 15000+600000
- 649341 words of font info for 198 fonts, out of 8000000 for 9000
+ 649252 words of font info for 197 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  117i,14n,121p,1014b,1114s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri8.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/Elyse/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on RMarkdown-article.pdf (2 pages, 211222 bytes).
+Output written on RMarkdown-article.pdf (2 pages, 211239 bytes).
 PDF statistics:
  123 PDF objects out of 1000 (max. 8388607)
  96 compressed objects within 1 object stream
