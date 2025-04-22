@@ -13,6 +13,41 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 
+% Pandoc citation processing
+%From Pandoc 3.1.8
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 
 \templatetype{pnasresearcharticle}  % Choose template
@@ -86,16 +121,15 @@ cours d'eau et des lacs, comme des larves d'insectes, des crustacés et
 des vers. Il est important de faire un suivi des organismes benthiques,
 car ils peuvent être utilisés comme bio-indicateur, afin d'évaluer la
 santé du cours d'eau et qu'ils servent de nourriture pour un grand
-nombre d'animaux (\textbf{article?}\{brysiewicz\_characterisation\_2022,
-\textbf{misc?}\{melccfp\_macroinvertebres\_nodate). Cette présente
-recherche cherche à caractériser comment la richesse spécifique varie
-d'une rivière à l'autre au Québec, à l'aide de trois questions
-principales, soit « comment la richesse spécifique du benthos varie en
-fonction de la vitesse du courant », « comment la richesse spécifique du
-benthos varie en fonction de la température de l'eau » et « comment la
-richesse spécifique du benthos varie en fonction de la profondeur de la
-rivière ». Nous pensons que ces trois facteurs devraient influencer la
-richesse spécifique du benthos, de manière positive ou négative.
+nombre d'animaux (1, 2). Cette présente recherche cherche à caractériser
+comment la richesse spécifique varie d'une rivière à l'autre au Québec,
+à l'aide de trois questions principales, soit « comment la richesse
+spécifique du benthos varie en fonction de la vitesse du courant », «
+comment la richesse spécifique du benthos varie en fonction de la
+température de l'eau » et « comment la richesse spécifique du benthos
+varie en fonction de la profondeur de la rivière ». Nous pensons que ces
+trois facteurs devraient influencer la richesse spécifique du benthos,
+de manière positive ou négative.
 
 \section{Méthode}\label{muxe9thode}
 
@@ -158,47 +192,42 @@ permet d'expliquer la différence dans la distribution spatiale du
 benthos, car la corrélation entre les deux variables n'est pas
 significative. Ce résultat nous étonne, car plusieurs études, dont une
 réalisée au Québec, semblent avoir trouvé un lien entre la profondeur et
-la différence en richesse spécifique
-(\textbf{article?}\{brysiewicz\_characterisation\_2022,
-\textbf{article?}\{tall\_effects\_2016). La profondeur étant liée à
+la différence en richesse spécifique (1, 3). La profondeur étant liée à
 d'autres paramètres comme la luminosité, la température et la
 disponibilité en oxygène, un de ces facteurs pourrait peut-être mieux
 expliquer la distribution spatiale du benthos. Tel que mentionné dans
 les résultats, la vitesse du courant n'est pas significative non plus.
 Encore une fois, cela est contraire à ce que l'on s'attendait, puisque
-(\textbf{article?})\{barmuta\_interaction\_1990 et
-(\textbf{article?})\{brysiewicz\_characterisation\_2022 ont trouvé une
-relation significative entre ces variables. Ensuite, tel que nous
-l'avions prédit, la température de l'eau a un impact sur la richesse
-spécifique du benthos. Cependant, alors que dans les recherches
+Barmuta et al.@barmuta\_interaction\_1990 et Brysiewicz et al. (1) ont
+trouvé une relation significative entre ces variables. Ensuite, tel que
+nous l'avions prédit, la température de l'eau a un impact sur la
+richesse spécifique du benthos. Cependant, alors que dans les recherches
 précédentes la température était un facteur important expliquant
 l'évolution spatiale de la diversité benthique, selon notre analyse,
-elle n'explique qu'une très petite partie de cette dernière.
-(\textbf{article?})\{hawkins\_channel\_1997 et
-(\textbf{article?})\{bonacina\_effects\_2023 suggèrent que certains
-taxons ne peuvent tolérer des températures trop extrêmes : une
-régression linéaire simple ne représente peut-être pas la relation entre
-la température de l'eau et la richesse spécifique de la bonne manière,
-ce qui pourrait expliquer pourquoi elle explique peu la dispersion
-spatiale. Ainsi, dans une prochaine analyse, il serait pertinent de
-tenter d'expliquer la relation entre ces deux variables à l'aide d'une
-autre formule, par exemple la formule quadratique, afin de prendre en
-compte la possibilité que l'eau diminue la diversité benthique
-lorsqu'elle est trop froide et trop chaude. De manière semblable, les
-résultats non-significatifs sont peut-être expliqués par le fait que la
-distribution spatiale du benthos a été étudiée en un seul bloc. Il est
-possible que certains taxons soient plus affectés par un paramètre que
-d'autres, ou qu'ils soient affectés de manière contraire, ce qui aurait
-pu nuire à établir une corrélation significative entre la vitesse du
-courant ou la profondeur de la rivière et la richesse spécifique.
-Finalement, il pourrait être intéressant faire des analyses multivariées
-afin de tenter d'avoir des résultats plus significatifs. Soit en prenant
-en compte plusieurs des variables étudiées dans cette présente analyse,
-soit en prenant en compte d'autres facteurs qui n'étaient pas présents
-dans les données récoltées, tel que le niveau d'oxygénation de l'eau ou
-sa concentration en nitrogène, qui sont important pour expliquer la
-diversité du benthos
-(\textbf{article?})\{brysiewicz\_characterisation\_2022.
+elle n'explique qu'une très petite partie de cette dernière. Hawkins et
+al. (4) et Bonacina et al. (5) suggèrent que certains taxons ne peuvent
+tolérer des températures trop extrêmes : une régression linéaire simple
+ne représente peut-être pas la relation entre la température de l'eau et
+la richesse spécifique de la bonne manière, ce qui pourrait expliquer
+pourquoi elle explique peu la dispersion spatiale. Ainsi, dans une
+prochaine analyse, il serait pertinent de tenter d'expliquer la relation
+entre ces deux variables à l'aide d'une autre formule, par exemple la
+formule quadratique, afin de prendre en compte la possibilité que l'eau
+diminue la diversité benthique lorsqu'elle est trop froide et trop
+chaude. De manière semblable, les résultats non-significatifs sont
+peut-être expliqués par le fait que la distribution spatiale du benthos
+a été étudiée en un seul bloc. Il est possible que certains taxons
+soient plus affectés par un paramètre que d'autres, ou qu'ils soient
+affectés de manière contraire, ce qui aurait pu nuire à établir une
+corrélation significative entre la vitesse du courant ou la profondeur
+de la rivière et la richesse spécifique. Finalement, il pourrait être
+intéressant faire des analyses multivariées afin de tenter d'avoir des
+résultats plus significatifs. Soit en prenant en compte plusieurs des
+variables étudiées dans cette présente analyse, soit en prenant en
+compte d'autres facteurs qui n'étaient pas présents dans les données
+récoltées, tel que le niveau d'oxygénation de l'eau ou sa concentration
+en nitrogène, qui sont important pour expliquer la diversité du benthos
+(1).
 
 \section*{References}\label{references}
 \addcontentsline{toc}{section}{References}
@@ -206,6 +235,47 @@ diversité du benthos
 \showmatmethods
 \showacknow
 \pnasbreak
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{0}{1}
+\bibitem[\citeproctext]{ref-brysiewicz_characterisation_2022}
+\CSLLeftMargin{1. }%
+\CSLRightInline{Brysiewicz A, Czerniejewski P, Dąbrowski J, Formicki K
+(2022) \href{https://doi.org/10.3390/ani12050606}{Characterisation of
+{Benthic} {Macroinvertebrate} {Communities} in {Small} {Watercourses} of
+the {European} {Central} {Plains} {Ecoregion} and the {Effect} of
+{Different} {Environmental} {Factors}}. \emph{Animals} 12(5):606.}
+
+\bibitem[\citeproctext]{ref-melccfp_macroinvertebres_nodate}
+\CSLLeftMargin{2. }%
+\CSLRightInline{MELCCFP Macroinvertébrés benthiques. Available at:
+\url{https://www.environnement.gouv.qc.ca/eau/eco_aqua/macroinvertebre/benthos/index.htm}
+{[}Accessed April 22, 2025{]}.}
+
+\bibitem[\citeproctext]{ref-tall_effects_2016}
+\CSLLeftMargin{3. }%
+\CSLRightInline{Tall L, Armellin A, Pinel-Alloul B, Méthot G, Hudon C
+(2016) \href{https://doi.org/10.1007/s10750-015-2531-7}{Effects of
+hydrological regime, landscape features, and environment on
+macroinvertebrates in {St}. {Lawrence} {River} wetlands}.
+\emph{Hydrobiologia} 778(1):221--241.}
+
+\bibitem[\citeproctext]{ref-hawkins_channel_1997}
+\CSLLeftMargin{4. }%
+\CSLRightInline{Hawkins CP, Hogue JN, Decker LM, Feminella JW (1997)
+\href{https://doi.org/10.2307/1468167}{Channel {Morphology}, {Water}
+{Temperature}, and {Assemblage} {Structure} of {Stream} {Insects}}.
+\emph{Journal of the North American Benthological Society}
+16(4):728--749.}
+
+\bibitem[\citeproctext]{ref-bonacina_effects_2023}
+\CSLLeftMargin{5. }%
+\CSLRightInline{Bonacina L, Fasano F, Mezzanotte V, Fornaroli R (2023)
+\href{https://doi.org/10.1111/brv.12903}{Effects of water temperature on
+freshwater macroinvertebrates: A systematic review}. \emph{Biological
+Reviews} 98(1):191--221.}
+
+\end{CSLReferences}
 
 
 
