@@ -19,4 +19,4 @@ creerBD|function|800af94b7ab0dc82
 process_data|function|b3db11683335bf9e
 graphique_richesse_profondeur|function|820b0163a4f6f19e
 graphique_richesse_courant|function|3cc1fd33fb452e42
-Projet_final_BIO500|stem|a71ec9daa40f8280|3ca4e4bff35f537d|c7a10c0dd42e90ba|438775412|RMarkdown_article/RMarkdown-article.pdf*RMarkdown_article/RMarkdown-article.Rmd*RMarkdown_article/RMarkdown-article_files|t20200.6850024458s|s330464b|330464|file|local|vector|||8.734|Package sidecap Warning: Package `ragged2e' not found -- expect bad formatting.. Package microtype Warning: Unable to apply patch `eqnum' on input line 98.|
+Projet_final_BIO500|stem|f7d2830705c83bb4|3ca4e4bff35f537d|c7a10c0dd42e90ba|438775412|RMarkdown_article/RMarkdown-article.pdf*RMarkdown_article/RMarkdown-article.Rmd*RMarkdown_article/RMarkdown-article_files|t20200.6938121703s|s307523b|307523|file|local|vector|||8.218|Package sidecap Warning: Package `ragged2e' not found -- expect bad formatting.. Package microtype Warning: Unable to apply patch `eqnum' on input line 98.|

@@ -52,7 +52,7 @@ Nous avons premièrement rassemblé et nettoyé les données récoltées par les
 
 Résultats 
 ========================================
-La richesse spécifique du benthos varie de façon positive avec la température de l’eau (pente = 0,5316, p=0,02946). Cependant, cette relation n’explique qu’une infime partie de la variation du benthos dans les différentes rivières, puisque le R2 est de 0,08632. Cette relation est visible dans la @ref(fig:fig_temperature).
+La richesse spécifique du benthos varie de façon positive avec la température de l’eau (pente = 0,5316, p=0,02946). Cependant, cette relation n’explique qu’une infime partie de la variation du benthos dans les différentes rivières, puisque le R2 est de 0,08632. Cette relation est visible dans la Figure 1.
 
 ```{r fig_temperature, echo=FALSE, message=FALSE, warning=FALSE, fig.width=3, fig.height=3, fig.align='center',fig.cap="Richesse spécifique en fonction de la température de l'eau."}
 data_1_plot <- tar_read(Graphique_richesseXtemperature)
@@ -60,16 +60,14 @@ plot(data_1_plot)
 ```
 
 
-Pour ce qui est des autres régressions, celle de la richesse spécifique en fonction de la rivière (p=0,293) et la vitesse du courant (p=0,532) ont respectivement des pentes de -0,2350 et 0,4067, mais ces relations ne sont pas significatives et ne peuvent donc pas être utilisées pour expliquer la variation spatiale du benthos. La relation entre la richesse spécifique et la vitesse du courant est illustrée dans le deuxième graphique @ref(fig:fig_courant)
-, où la vitesse a été séparée en différentes catégories, afin de mieux illustrer comment elle varie. 
+Pour ce qui est des autres régressions, celle de la richesse spécifique en fonction de la rivière (p=0,293) et la vitesse du courant (p=0,532) ont respectivement des pentes de -0,2350 et 0,4067, mais ces relations ne sont pas significatives et ne peuvent donc pas être utilisées pour expliquer la variation spatiale du benthos. La relation entre la richesse spécifique et la vitesse du courant est illustrée dans le deuxième graphique (Figure 2), où la vitesse a été séparée en différentes catégories, afin de mieux illustrer comment elle varie. 
 
 ```{r fig_courant, echo=FALSE, message=FALSE, warning=FALSE, fig.width=3, fig.height=3, fig.align='center',fig.cap="Richesse spécifique en fonction de la vitesse du courant.", fig.env="figure", fig.pos='H'}
 data_2_plot <- tar_read(Graphique_richesseXcourant)
 plot(data_2_plot)
 ```
 
-Puisque cette relation n’est pas significative, peu de variation est observée entre les différentes catégories, avec une diversité maximale lorsqu’il y a entre 0,4 et 0,6m de profondeur. Le graphique @ref(fig:fig_profondeur)
-quant à lui, représente comment la diversité spécifique est distribuée selon différentes classes de vitesse de courant : plus le pic d’une courbe est vers la droite et plus il est haut, plus la chance de retrouver une forte diversité benthique dans cette catégorie de vitesse est importante. 
+Puisque cette relation n’est pas significative, peu de variation est observée entre les différentes catégories, avec une diversité maximale lorsqu’il y a entre 0,4 et 0,6m de profondeur. Le graphique (Figure 3) quant à lui, représente comment la diversité spécifique est distribuée selon différentes classes de vitesse de courant : plus le pic d’une courbe est vers la droite et plus il est haut, plus la chance de retrouver une forte diversité benthique dans cette catégorie de vitesse est importante. 
 
 ```{r fig_profondeur, echo=FALSE, message=FALSE, warning=FALSE, fig.width=3, fig.height=3, fig.align='center',fig.cap="Richesse spécifique en fonction de la profondeur."}
 data_2_plot <- tar_read(Graphique_richesseXprofondeur)
@@ -86,7 +84,7 @@ De manière semblable, les résultats non-significatifs sont peut-être expliqu�
 Finalement, il pourrait être intéressant faire des analyses multivariées afin de tenter d’avoir des résultats plus significatifs. Soit en prenant en compte plusieurs des variables étudiées dans cette présente analyse, soit en prenant en compte d’autres facteurs qui n’étaient pas présents dans les données récoltées, tel que le niveau d’oxygénation de l’eau ou sa concentration en nitrogène, qui sont important pour expliquer la diversité du benthos @brysiewicz_characterisation_2022. 
 
 
-References {#references .unnumbered}
+Réferences {#references .unnumbered}
 ========================================
 
 
